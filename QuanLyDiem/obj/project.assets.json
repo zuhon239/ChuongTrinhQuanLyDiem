@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem15.3\\QuanLyDiem\\QuanLyDiem.csproj",
+      "projectUniqueName": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\QuanLyDiem.csproj",
       "projectName": "QuanLyDiem",
-      "projectPath": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem15.3\\QuanLyDiem\\QuanLyDiem.csproj",
+      "projectPath": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\QuanLyDiem.csproj",
       "packagesPath": "C:\\Users\\vuxhng\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem15.3\\QuanLyDiem\\obj\\",
+      "outputPath": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\vuxhng\\AppData\\Roaming\\NuGet\\NuGet.Config",
