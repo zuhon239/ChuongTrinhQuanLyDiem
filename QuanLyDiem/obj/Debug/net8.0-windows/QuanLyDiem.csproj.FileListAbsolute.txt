@@ -1,0 +1,73 @@
+D:\Anh Quân\A new journey UEH\HK4 - HKĐ2025\Đồ án\QuanLyDiem\bin\Debug\net8.0-windows\QuanLyDiem.exe
+D:\Anh Quân\A new journey UEH\HK4 - HKĐ2025\Đồ án\QuanLyDiem\bin\Debug\net8.0-windows\QuanLyDiem.deps.json
+D:\Anh Quân\A new journey UEH\HK4 - HKĐ2025\Đồ án\QuanLyDiem\bin\Debug\net8.0-windows\QuanLyDiem.runtimeconfig.json
+D:\Anh Quân\A new journey UEH\HK4 - HKĐ2025\Đồ án\QuanLyDiem\bin\Debug\net8.0-windows\QuanLyDiem.dll
+D:\Anh Quân\A new journey UEH\HK4 - HKĐ2025\Đồ án\QuanLyDiem\bin\Debug\net8.0-windows\QuanLyDiem.pdb
+D:\Anh Quân\A new journey UEH\HK4 - HKĐ2025\Đồ án\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.View.HocSinhForm.resources
+D:\Anh Quân\A new journey UEH\HK4 - HKĐ2025\Đồ án\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.MainForm.resources
+D:\Anh Quân\A new journey UEH\HK4 - HKĐ2025\Đồ án\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.csproj.GenerateResource.cache
+D:\Anh Quân\A new journey UEH\HK4 - HKĐ2025\Đồ án\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.GeneratedMSBuildEditorConfig.editorconfig
+D:\Anh Quân\A new journey UEH\HK4 - HKĐ2025\Đồ án\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.AssemblyInfoInputs.cache
+D:\Anh Quân\A new journey UEH\HK4 - HKĐ2025\Đồ án\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.AssemblyInfo.cs
+D:\Anh Quân\A new journey UEH\HK4 - HKĐ2025\Đồ án\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.csproj.CoreCompileInputs.cache
+D:\Anh Quân\A new journey UEH\HK4 - HKĐ2025\Đồ án\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.dll
+D:\Anh Quân\A new journey UEH\HK4 - HKĐ2025\Đồ án\QuanLyDiem\obj\Debug\net8.0-windows\refint\QuanLyDiem.dll
+D:\Anh Quân\A new journey UEH\HK4 - HKĐ2025\Đồ án\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.pdb
+D:\Anh Quân\A new journey UEH\HK4 - HKĐ2025\Đồ án\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.genruntimeconfig.cache
+D:\Anh Quân\A new journey UEH\HK4 - HKĐ2025\Đồ án\QuanLyDiem\obj\Debug\net8.0-windows\ref\QuanLyDiem.dll
+S:\đại học\oop\đồ án\School-Score-Manager-System\School-Score-Manager-System\QuanLyDiem\bin\Debug\net8.0-windows\QuanLyDiem.exe
+S:\đại học\oop\đồ án\School-Score-Manager-System\School-Score-Manager-System\QuanLyDiem\bin\Debug\net8.0-windows\QuanLyDiem.deps.json
+S:\đại học\oop\đồ án\School-Score-Manager-System\School-Score-Manager-System\QuanLyDiem\bin\Debug\net8.0-windows\QuanLyDiem.runtimeconfig.json
+S:\đại học\oop\đồ án\School-Score-Manager-System\School-Score-Manager-System\QuanLyDiem\bin\Debug\net8.0-windows\QuanLyDiem.dll
+S:\đại học\oop\đồ án\School-Score-Manager-System\School-Score-Manager-System\QuanLyDiem\bin\Debug\net8.0-windows\QuanLyDiem.pdb
+S:\đại học\oop\đồ án\School-Score-Manager-System\School-Score-Manager-System\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.View.HocSinhForm.resources
+S:\đại học\oop\đồ án\School-Score-Manager-System\School-Score-Manager-System\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.MainForm.resources
+S:\đại học\oop\đồ án\School-Score-Manager-System\School-Score-Manager-System\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.csproj.GenerateResource.cache
+S:\đại học\oop\đồ án\School-Score-Manager-System\School-Score-Manager-System\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.GeneratedMSBuildEditorConfig.editorconfig
+S:\đại học\oop\đồ án\School-Score-Manager-System\School-Score-Manager-System\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.AssemblyInfoInputs.cache
+S:\đại học\oop\đồ án\School-Score-Manager-System\School-Score-Manager-System\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.AssemblyInfo.cs
+S:\đại học\oop\đồ án\School-Score-Manager-System\School-Score-Manager-System\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.csproj.CoreCompileInputs.cache
+S:\đại học\oop\đồ án\School-Score-Manager-System\School-Score-Manager-System\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.sourcelink.json
+S:\đại học\oop\đồ án\School-Score-Manager-System\School-Score-Manager-System\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.dll
+S:\đại học\oop\đồ án\School-Score-Manager-System\School-Score-Manager-System\QuanLyDiem\obj\Debug\net8.0-windows\refint\QuanLyDiem.dll
+S:\đại học\oop\đồ án\School-Score-Manager-System\School-Score-Manager-System\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.pdb
+S:\đại học\oop\đồ án\School-Score-Manager-System\School-Score-Manager-System\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.genruntimeconfig.cache
+S:\đại học\oop\đồ án\School-Score-Manager-System\School-Score-Manager-System\QuanLyDiem\obj\Debug\net8.0-windows\ref\QuanLyDiem.dll
+S:\đại học\oop\đồ án\School-Score-Manager-System\School-Score-Manager-System\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.View.Form1.resources
+C:\Users\vuxhng\Downloads\School-Score-Manager-System\project 1\ProjectQuanLyDiem\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.View.Form1.resources
+C:\Users\vuxhng\Downloads\School-Score-Manager-System\project 1\ProjectQuanLyDiem\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.View.HocSinhForm.resources
+C:\Users\vuxhng\Downloads\School-Score-Manager-System\project 1\ProjectQuanLyDiem\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.MainForm.resources
+C:\Users\vuxhng\Downloads\School-Score-Manager-System\project 1\ProjectQuanLyDiem\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.csproj.GenerateResource.cache
+C:\Users\vuxhng\Downloads\School-Score-Manager-System\project 1\ProjectQuanLyDiem\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vuxhng\Downloads\School-Score-Manager-System\project 1\ProjectQuanLyDiem\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.AssemblyInfoInputs.cache
+C:\Users\vuxhng\Downloads\School-Score-Manager-System\project 1\ProjectQuanLyDiem\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.AssemblyInfo.cs
+C:\Users\vuxhng\Downloads\School-Score-Manager-System\project 1\ProjectQuanLyDiem\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.csproj.CoreCompileInputs.cache
+C:\Users\vuxhng\Downloads\School-Score-Manager-System\project 1\ProjectQuanLyDiem\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.sourcelink.json
+C:\Users\vuxhng\Downloads\School-Score-Manager-System\project 1\ProjectQuanLyDiem\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.dll
+C:\Users\vuxhng\Downloads\School-Score-Manager-System\project 1\ProjectQuanLyDiem\QuanLyDiem\obj\Debug\net8.0-windows\refint\QuanLyDiem.dll
+C:\Users\vuxhng\Downloads\School-Score-Manager-System\project 1\ProjectQuanLyDiem\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.pdb
+C:\Users\vuxhng\Downloads\School-Score-Manager-System\project 1\ProjectQuanLyDiem\QuanLyDiem\bin\Debug\net8.0-windows\QuanLyDiem.exe
+C:\Users\vuxhng\Downloads\School-Score-Manager-System\project 1\ProjectQuanLyDiem\QuanLyDiem\bin\Debug\net8.0-windows\QuanLyDiem.deps.json
+C:\Users\vuxhng\Downloads\School-Score-Manager-System\project 1\ProjectQuanLyDiem\QuanLyDiem\bin\Debug\net8.0-windows\QuanLyDiem.runtimeconfig.json
+C:\Users\vuxhng\Downloads\School-Score-Manager-System\project 1\ProjectQuanLyDiem\QuanLyDiem\bin\Debug\net8.0-windows\QuanLyDiem.dll
+C:\Users\vuxhng\Downloads\School-Score-Manager-System\project 1\ProjectQuanLyDiem\QuanLyDiem\bin\Debug\net8.0-windows\QuanLyDiem.pdb
+C:\Users\vuxhng\Downloads\School-Score-Manager-System\project 1\ProjectQuanLyDiem\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.genruntimeconfig.cache
+C:\Users\vuxhng\Downloads\School-Score-Manager-System\project 1\ProjectQuanLyDiem\QuanLyDiem\obj\Debug\net8.0-windows\ref\QuanLyDiem.dll
+C:\Users\vuxhng\Downloads\Score Manager System\QuanLyDiem15.3\QuanLyDiem\bin\Debug\net8.0-windows\QuanLyDiem.exe
+C:\Users\vuxhng\Downloads\Score Manager System\QuanLyDiem15.3\QuanLyDiem\bin\Debug\net8.0-windows\QuanLyDiem.deps.json
+C:\Users\vuxhng\Downloads\Score Manager System\QuanLyDiem15.3\QuanLyDiem\bin\Debug\net8.0-windows\QuanLyDiem.runtimeconfig.json
+C:\Users\vuxhng\Downloads\Score Manager System\QuanLyDiem15.3\QuanLyDiem\bin\Debug\net8.0-windows\QuanLyDiem.dll
+C:\Users\vuxhng\Downloads\Score Manager System\QuanLyDiem15.3\QuanLyDiem\bin\Debug\net8.0-windows\QuanLyDiem.pdb
+C:\Users\vuxhng\Downloads\Score Manager System\QuanLyDiem15.3\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.View.Form1.resources
+C:\Users\vuxhng\Downloads\Score Manager System\QuanLyDiem15.3\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.View.HocSinhForm.resources
+C:\Users\vuxhng\Downloads\Score Manager System\QuanLyDiem15.3\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.MainForm.resources
+C:\Users\vuxhng\Downloads\Score Manager System\QuanLyDiem15.3\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.csproj.GenerateResource.cache
+C:\Users\vuxhng\Downloads\Score Manager System\QuanLyDiem15.3\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vuxhng\Downloads\Score Manager System\QuanLyDiem15.3\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.AssemblyInfoInputs.cache
+C:\Users\vuxhng\Downloads\Score Manager System\QuanLyDiem15.3\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.AssemblyInfo.cs
+C:\Users\vuxhng\Downloads\Score Manager System\QuanLyDiem15.3\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.csproj.CoreCompileInputs.cache
+C:\Users\vuxhng\Downloads\Score Manager System\QuanLyDiem15.3\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.dll
+C:\Users\vuxhng\Downloads\Score Manager System\QuanLyDiem15.3\QuanLyDiem\obj\Debug\net8.0-windows\refint\QuanLyDiem.dll
+C:\Users\vuxhng\Downloads\Score Manager System\QuanLyDiem15.3\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.pdb
+C:\Users\vuxhng\Downloads\Score Manager System\QuanLyDiem15.3\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.genruntimeconfig.cache
+C:\Users\vuxhng\Downloads\Score Manager System\QuanLyDiem15.3\QuanLyDiem\obj\Debug\net8.0-windows\ref\QuanLyDiem.dll
