@@ -14,7 +14,7 @@ namespace QuanLyDiem
         // Các controller
         private HocSinhController hocSinhController;
         //private GiaoVienController giaoVienController;
-        //private LopHocController lopHocController;
+        private QuanLyLopHoc lopHocController;
         //private MonHocController monHocController;
         //private DiemSoController diemSoController;
         //private QuanLyDiemController quanLyDiemController;
@@ -274,7 +274,7 @@ namespace QuanLyDiem
         // Sự kiện click cho nút Quản lý Học sinh
         private void btnQuanLyHocSinh_Click(object sender, EventArgs e)
         {
-            HocSinhForm hocSinhForm = new HocSinhForm(hocSinhController);
+            FormQuanLyHocSinh hocSinhForm = new FormQuanLyHocSinh(hocSinhController, lopHocController);
             hocSinhForm.ShowDialog();
         }
 

@@ -3,16 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|c:\\users\\vuxhng\\downloads\\score manager system\\quanlydiem\\view\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|solutionrelative:view\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|c:\\users\\vuxhng\\downloads\\score manager system\\quanlydiem\\controller\\lophoccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|solutionrelative:controller\\lophoccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|c:\\users\\vuxhng\\downloads\\score manager system\\quanlydiem\\view\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|solutionrelative:view\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|c:\\users\\vuxhng\\downloads\\score manager system\\quanlydiem\\view\\formquanlyhocsinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|solutionrelative:view\\formquanlyhocsinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|c:\\users\\vuxhng\\downloads\\score manager system\\quanlydiem\\controller\\giaoviencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|solutionrelative:controller\\giaoviencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|c:\\users\\vuxhng\\downloads\\score manager system\\quanlydiem\\model\\lophoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|solutionrelative:model\\lophoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\view\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|solutionrelative:view\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\view\\formquanlyhocsinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|solutionrelative:view\\formquanlyhocsinh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|c:\\users\\vuxhng\\downloads\\score manager system\\quanlydiem\\view\\hocsinhform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|solutionrelative:view\\hocsinhform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|c:\\users\\vuxhng\\downloads\\score manager system\\quanlydiem\\controller\\monhoccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|solutionrelative:controller\\monhoccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\view\\hocsinhform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|solutionrelative:view\\hocsinhform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|c:\\users\\vuxhng\\downloads\\score manager system\\quanlydiem\\view\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|solutionrelative:view\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|c:\\users\\vuxhng\\downloads\\score manager system\\quanlydiem\\view\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|solutionrelative:view\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,43 +54,142 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HocSinhForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\View\\HocSinhForm.cs",
-              "RelativeDocumentMoniker": "View\\HocSinhForm.cs",
-              "ToolTip": "C:\\Users\\vuxhng\\Downloads\\School-Score-Manager-System\\project 1\\ProjectQuanLyDiem\\QuanLyDiem\\View\\HocSinhForm.cs [Design]",
-              "RelativeToolTip": "..\\..\\School-Score-Manager-System\\project 1\\ProjectQuanLyDiem\\QuanLyDiem\\View\\HocSinhForm.cs [Design]",
+              "DocumentIndex": 3,
+              "Title": "GiaoVienController.cs",
+              "DocumentMoniker": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\Controller\\GiaoVienController.cs",
+              "RelativeDocumentMoniker": "Controller\\GiaoVienController.cs",
+              "ToolTip": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\Controller\\GiaoVienController.cs",
+              "RelativeToolTip": "Controller\\GiaoVienController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T17:57:10.077Z"
+              "WhenOpened": "2025-03-14T19:29:12.494Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\View\\Form1.cs",
-              "RelativeDocumentMoniker": "View\\Form1.cs",
-              "ToolTip": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\View\\Form1.cs",
-              "RelativeToolTip": "View\\Form1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAbAAAA",
+              "DocumentIndex": 4,
+              "Title": "LopHoc.cs",
+              "DocumentMoniker": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\Model\\LopHoc.cs",
+              "RelativeDocumentMoniker": "Model\\LopHoc.cs",
+              "ToolTip": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\Model\\LopHoc.cs",
+              "RelativeToolTip": "Model\\LopHoc.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T17:56:57.409Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-14T19:27:16.454Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\View\\MainForm.cs",
+              "RelativeDocumentMoniker": "View\\MainForm.cs",
+              "ToolTip": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\View\\MainForm.cs [Design]",
+              "RelativeToolTip": "View\\MainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T19:08:34.088Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FormQuanLyHocSinh.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\View\\FormQuanLyHocSinh.cs",
+              "RelativeDocumentMoniker": "View\\FormQuanLyHocSinh.cs",
+              "ToolTip": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\View\\FormQuanLyHocSinh.cs [Design]",
+              "RelativeToolTip": "View\\FormQuanLyHocSinh.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T19:08:24.256Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "FormQuanLyHocSinh.cs",
+              "DocumentMoniker": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\View\\FormQuanLyHocSinh.cs",
+              "RelativeDocumentMoniker": "View\\FormQuanLyHocSinh.cs",
+              "ToolTip": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\View\\FormQuanLyHocSinh.cs",
+              "RelativeToolTip": "View\\FormQuanLyHocSinh.cs",
+              "ViewState": "AQIAADcBAAAAAAAAAAAAAA0AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T19:05:34.741Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "MainForm.cs",
               "DocumentMoniker": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\View\\MainForm.cs",
               "RelativeDocumentMoniker": "View\\MainForm.cs",
               "ToolTip": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\View\\MainForm.cs",
               "RelativeToolTip": "View\\MainForm.cs",
-              "ViewState": "AQIAANkAAAAAAAAAAAAAAEABAAAJAAAA",
+              "ViewState": "AQIAAAkBAAAAAAAAAAAAABoBAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T17:53:53.678Z"
+              "WhenOpened": "2025-03-14T17:53:53.678Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HocSinhForm.cs",
+              "DocumentMoniker": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\View\\HocSinhForm.cs",
+              "RelativeDocumentMoniker": "View\\HocSinhForm.cs",
+              "ToolTip": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\View\\HocSinhForm.cs",
+              "RelativeToolTip": "View\\HocSinhForm.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAADIAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T19:03:17.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LopHocController.cs",
+              "DocumentMoniker": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\Controller\\LopHocController.cs",
+              "RelativeDocumentMoniker": "Controller\\LopHocController.cs",
+              "ToolTip": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\Controller\\LopHocController.cs",
+              "RelativeToolTip": "Controller\\LopHocController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T19:16:04.859Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MonHocController.cs",
+              "DocumentMoniker": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\Controller\\MonHocController.cs",
+              "RelativeDocumentMoniker": "Controller\\MonHocController.cs",
+              "ToolTip": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\Controller\\MonHocController.cs",
+              "RelativeToolTip": "Controller\\MonHocController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T19:16:03.831Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "HocSinhForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\View\\HocSinhForm.cs",
+              "RelativeDocumentMoniker": "View\\HocSinhForm.cs",
+              "ToolTip": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\View\\HocSinhForm.cs [Design]",
+              "RelativeToolTip": "View\\HocSinhForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T17:57:10.077Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\View\\Form1.cs",
+              "RelativeDocumentMoniker": "View\\Form1.cs",
+              "ToolTip": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\View\\Form1.cs",
+              "RelativeToolTip": "View\\Form1.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAAAAsAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T17:56:57.409Z"
             }
           ]
         }
