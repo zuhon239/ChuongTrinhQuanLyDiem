@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuanLyDiem.View
-{ //comment diem
+{ //comment diem 1234567
     public partial class Form1 : Form
     {
         private Label lblTieuDe;
