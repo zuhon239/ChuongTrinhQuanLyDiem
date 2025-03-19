@@ -448,10 +448,10 @@
       "TenMH": "H\u00F3a H\u1ECDc",
       "SoTiet": 30
     },
-    "DiemMieng": 0,
-    "Diem15Phut": 0,
-    "Diem1Tiet": 0,
-    "DiemHK": 0
+    "DiemMieng": 5,
+    "Diem15Phut": 7,
+    "Diem1Tiet": 8,
+    "DiemHK": 7.5
   },
   {
     "HocSinh": {
@@ -471,9 +471,78 @@
       "TenMH": "H\u00F3a H\u1ECDc",
       "SoTiet": 30
     },
-    "DiemMieng": 0,
-    "Diem15Phut": 0,
-    "Diem1Tiet": 0,
-    "DiemHK": 0
+    "DiemMieng": 8,
+    "Diem15Phut": 8,
+    "Diem1Tiet": 7,
+    "DiemHK": 7
+  },
+  {
+    "HocSinh": {
+      "MaHS": "HS001",
+      "LopHoc": {
+        "MaLop": "L001",
+        "TenLop": "10A1",
+        "GiaoVienChuNhiem": null
+      },
+      "HoTen": "Nguy\u1EC5n Th\u1ECB Xu\u00E2n",
+      "NgaySinh": "2005-02-15T00:00:00",
+      "GioiTinh": "N\u1EEF",
+      "DiaChi": "H\u00E0 N\u1ED9i"
+    },
+    "MonHoc": {
+      "MaMH": "MH005",
+      "TenMH": "Ti\u1EBFng Anh",
+      "SoTiet": 30
+    },
+    "DiemMieng": 10,
+    "Diem15Phut": 10,
+    "Diem1Tiet": 9,
+    "DiemHK": 8.25
+  },
+  {
+    "HocSinh": {
+      "MaHS": "HS002",
+      "LopHoc": {
+        "MaLop": "L001",
+        "TenLop": "10A1",
+        "GiaoVienChuNhiem": null
+      },
+      "HoTen": "Tr\u1EA7n V\u0103n L\u00E2m",
+      "NgaySinh": "2005-06-22T00:00:00",
+      "GioiTinh": "Nam",
+      "DiaChi": "H\u00E0 N\u1ED9i"
+    },
+    "MonHoc": {
+      "MaMH": "MH005",
+      "TenMH": "Ti\u1EBFng Anh",
+      "SoTiet": 30
+    },
+    "DiemMieng": 8,
+    "Diem15Phut": 7,
+    "Diem1Tiet": 7,
+    "DiemHK": 8
+  },
+  {
+    "HocSinh": {
+      "MaHS": "HS003",
+      "LopHoc": {
+        "MaLop": "L001",
+        "TenLop": "10A1",
+        "GiaoVienChuNhiem": null
+      },
+      "HoTen": "L\u00EA Th\u1ECB Kim Chi",
+      "NgaySinh": "2005-09-10T00:00:00",
+      "GioiTinh": "N\u1EEF",
+      "DiaChi": "H\u00E0 N\u1ED9i"
+    },
+    "MonHoc": {
+      "MaMH": "MH005",
+      "TenMH": "Ti\u1EBFng Anh",
+      "SoTiet": 30
+    },
+    "DiemMieng": 9,
+    "Diem15Phut": 9,
+    "Diem1Tiet": 6,
+    "DiemHK": 8
   }
 ]

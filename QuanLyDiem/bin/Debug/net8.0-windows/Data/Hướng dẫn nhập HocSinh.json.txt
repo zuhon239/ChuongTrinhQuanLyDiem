@@ -1,0 +1,33 @@
+Tổng quan cấu trúc
+[
+ {
+    "MaHS": "HS001",
+    "HoTen": "Nguyễn Thị Xuân",
+    "NgaySinh": "2005-02-15",
+    "GioiTinh": "Nữ",
+    "DiaChi": "Hà Nội",
+    "LopHoc": {
+      "MaLop": "L001",
+      "TenLop": "10A1"
+    }
+ },
+ {
+    "MaHS": "HS002",
+    "HoTen": "Trần Văn Lâm",
+    "NgaySinh": "2005-06-22",
+    "GioiTinh": "Nam",
+    "DiaChi": "Hà Nội",
+    "LopHoc": {
+      "MaLop": "L001",
+      "TenLop": "10A1"
+    }
+  },
+...........
+]
+Lưu ý: 
++ Tổng có 6 lớp bao gồm 10A1 (L001) , 10A2 (L002), 11A1 (L003), 11A2 (LOO4), 12A1 (L005), 12A2 (L006). L00x là mã lớp
++ Hien tại đã có 6 học sinh, trong đó 3 học sinh là của 10A1, và 3 của 10A2
++ Mỗi lớp A1 sẽ có 10 học sinh, lớp A2 là 9 học sinh
++ Nhớ là 10A1 và 10A2 mỗi lớp đã có 3 học sinh và add cho đủ nữa là oke
++ Để dễ quản lý thì add theo thứ tự lớp là oke
++ Lưu ý dấu "," ngắt giữa các đối tượng và khi đã xong kh dùng dấu phẩy nữa

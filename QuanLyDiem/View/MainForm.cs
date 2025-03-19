@@ -116,7 +116,7 @@ namespace QuanLyDiem
             {
                 g.Clear(Color.FromArgb(52, 152, 219));
                 g.FillEllipse(new SolidBrush(Color.White), 10, 10, 44, 44);
-                g.DrawString("LTK", new Font("Arial", 14, FontStyle.Bold), new SolidBrush(Color.FromArgb(52, 152, 219)), 12, 18);
+                g.DrawString("LTK", new Font("Arial", 14, FontStyle.Bold), new SolidBrush(Color.FromArgb(52, 152, 219)), 11, 21);
             }
             this.picLogo.Image = logoBitmap;
             this.pnlHeader.Controls.Add(this.picLogo);

@@ -3,24 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|c:\\users\\vuxhng\\downloads\\score manager system\\quanlydiem\\view\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|solutionrelative:view\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|c:\\users\\vuxhng\\downloads\\score manager system\\quanlydiem\\view\\formquanlydiem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|solutionrelative:view\\formquanlydiem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\view\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|solutionrelative:view\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|c:\\users\\vuxhng\\downloads\\score manager system\\quanlydiem\\model\\nguoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|solutionrelative:model\\nguoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|c:\\users\\vuxhng\\downloads\\score manager system\\quanlydiem\\controller\\diemmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|solutionrelative:controller\\diemmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|c:\\users\\vuxhng\\downloads\\score manager system\\quanlydiem\\view\\formxemdiem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|solutionrelative:view\\formxemdiem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|c:\\users\\vuxhng\\downloads\\score manager system\\quanlydiem\\view\\formquanlydiem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\view\\formxemdiem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|solutionrelative:view\\formxemdiem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\view\\formquanlydiem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|solutionrelative:view\\formquanlydiem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|c:\\users\\vuxhng\\downloads\\score manager system\\quanlydiem\\model\\diemso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|solutionrelative:model\\diemso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|c:\\users\\vuxhng\\downloads\\score manager system\\quanlydiem\\view\\formxemdiem.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|solutionrelative:view\\formxemdiem.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|c:\\users\\vuxhng\\downloads\\score manager system\\quanlydiem\\view\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|solutionrelative:view\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\view\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|solutionrelative:view\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|c:\\users\\vuxhng\\downloads\\score manager system\\quanlydiem\\controller\\quanlylophoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,16 +55,8 @@
       "RelativeMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|c:\\users\\vuxhng\\downloads\\score manager system\\quanlydiem\\controller\\diemmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|solutionrelative:controller\\diemmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|c:\\users\\vuxhng\\downloads\\score manager system\\quanlydiem\\controller\\quanlymonhoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|solutionrelative:controller\\quanlymonhoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|c:\\users\\vuxhng\\downloads\\score manager system\\quanlydiem\\model\\nguoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|solutionrelative:model\\nguoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|c:\\users\\vuxhng\\downloads\\score manager system\\quanlydiem\\model\\lophoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -57,18 +69,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|c:\\users\\vuxhng\\downloads\\score manager system\\quanlydiem\\model\\giaovien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|solutionrelative:model\\giaovien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|c:\\users\\vuxhng\\downloads\\score manager system\\quanlydiem\\model\\diemso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|solutionrelative:model\\diemso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\view\\formxemdiem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|solutionrelative:view\\formxemdiem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|c:\\users\\vuxhng\\downloads\\score manager system\\quanlydiem\\view\\formxemdiem.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|solutionrelative:view\\formxemdiem.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{664004F3-1012-498D-B674-CFF775A7AC10}|QuanLyDiem.csproj|c:\\users\\vuxhng\\downloads\\score manager system\\quanlydiem\\view\\formquanlydiem.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -90,59 +90,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FormQuanLyDiem.cs",
-              "DocumentMoniker": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\View\\FormQuanLyDiem.cs",
-              "RelativeDocumentMoniker": "View\\FormQuanLyDiem.cs",
-              "ToolTip": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\View\\FormQuanLyDiem.cs",
-              "RelativeToolTip": "View\\FormQuanLyDiem.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAAGAAAAA6AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T07:10:23.025Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\View\\MainForm.cs",
-              "RelativeDocumentMoniker": "View\\MainForm.cs",
-              "ToolTip": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\View\\MainForm.cs [Design]",
-              "RelativeToolTip": "View\\MainForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T19:08:34.088Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainForm.cs",
-              "DocumentMoniker": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\View\\MainForm.cs",
-              "RelativeDocumentMoniker": "View\\MainForm.cs",
-              "ToolTip": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\View\\MainForm.cs",
-              "RelativeToolTip": "View\\MainForm.cs",
-              "ViewState": "AQIAAL0AAAAAAAAAAAAAAMoAAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T17:53:53.678Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MonHoc.cs",
-              "DocumentMoniker": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\Model\\MonHoc.cs",
-              "RelativeDocumentMoniker": "Model\\MonHoc.cs",
-              "ToolTip": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\Model\\MonHoc.cs",
-              "RelativeToolTip": "Model\\MonHoc.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T10:46:21.424Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
@@ -151,52 +100,29 @@
               "RelativeDocumentMoniker": "View\\FormXemDiem.cs",
               "ToolTip": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\View\\FormXemDiem.cs",
               "RelativeToolTip": "View\\FormXemDiem.cs",
-              "ViewState": "AQIAAF8BAAAAAAAAAAAAAIsBAAA5AAAA",
+              "ViewState": "AQIAAAYBAAAAAAAAAAAcwBUBAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-19T10:00:31.65Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FormQuanLyDiem.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "FormQuanLyDiem.cs",
               "DocumentMoniker": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\View\\FormQuanLyDiem.cs",
               "RelativeDocumentMoniker": "View\\FormQuanLyDiem.cs",
-              "ToolTip": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\View\\FormQuanLyDiem.cs [Design]",
-              "RelativeToolTip": "View\\FormQuanLyDiem.cs [Design]",
+              "ToolTip": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\View\\FormQuanLyDiem.cs",
+              "RelativeToolTip": "View\\FormQuanLyDiem.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T07:10:12.724Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "DiemManager.cs",
-              "DocumentMoniker": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\Controller\\DiemManager.cs",
-              "RelativeDocumentMoniker": "Controller\\DiemManager.cs",
-              "ToolTip": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\Controller\\DiemManager.cs",
-              "RelativeToolTip": "Controller\\DiemManager.cs",
-              "ViewState": "AQIAAFgAAAAAAAAAAAAAABcAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T02:40:39.615Z",
+              "WhenOpened": "2025-03-19T07:10:23.025Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "QuanLyLopHoc.cs",
-              "DocumentMoniker": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\Controller\\QuanLyLopHoc.cs",
-              "RelativeDocumentMoniker": "Controller\\QuanLyLopHoc.cs",
-              "ToolTip": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\Controller\\QuanLyLopHoc.cs",
-              "RelativeToolTip": "Controller\\QuanLyLopHoc.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACQAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T10:03:53.278Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "QuanLyMonHoc.cs",
               "DocumentMoniker": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\Controller\\QuanLyMonHoc.cs",
               "RelativeDocumentMoniker": "Controller\\QuanLyMonHoc.cs",
@@ -204,51 +130,75 @@
               "RelativeToolTip": "Controller\\QuanLyMonHoc.cs",
               "ViewState": "AQIAAA0AAAAAAAAAAAAAACYAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T19:16:03.831Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-14T19:16:03.831Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "LopHoc.cs",
-              "DocumentMoniker": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\Model\\LopHoc.cs",
-              "RelativeDocumentMoniker": "Model\\LopHoc.cs",
-              "ToolTip": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\Model\\LopHoc.cs",
-              "RelativeToolTip": "Model\\LopHoc.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAJAAAA",
+              "DocumentIndex": 7,
+              "Title": "FormXemDiem.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\View\\FormXemDiem.Designer.cs",
+              "RelativeDocumentMoniker": "View\\FormXemDiem.Designer.cs",
+              "ToolTip": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\View\\FormXemDiem.Designer.cs",
+              "RelativeToolTip": "View\\FormXemDiem.Designer.cs",
+              "ViewState": "AQIAAH8AAAAAAAAAAAAswJ0AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T19:27:16.454Z",
+              "WhenOpened": "2025-03-19T10:03:10.063Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "HocSinh.cs",
-              "DocumentMoniker": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\Model\\HocSinh.cs",
-              "RelativeDocumentMoniker": "Model\\HocSinh.cs",
-              "ToolTip": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\Model\\HocSinh.cs",
-              "RelativeToolTip": "Model\\HocSinh.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 4,
+              "Title": "FormXemDiem.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\View\\FormXemDiem.cs",
+              "RelativeDocumentMoniker": "View\\FormXemDiem.cs",
+              "ToolTip": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\View\\FormXemDiem.cs [Design]",
+              "RelativeToolTip": "View\\FormXemDiem.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T02:40:29.527Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T10:00:14.016Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 6,
               "Title": "DiemSo.cs",
               "DocumentMoniker": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\Model\\DiemSo.cs",
               "RelativeDocumentMoniker": "Model\\DiemSo.cs",
               "ToolTip": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\Model\\DiemSo.cs",
               "RelativeToolTip": "Model\\DiemSo.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAxwAoAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-18T02:40:27.17Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 2,
+              "Title": "DiemManager.cs",
+              "DocumentMoniker": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\Controller\\DiemManager.cs",
+              "RelativeDocumentMoniker": "Controller\\DiemManager.cs",
+              "ToolTip": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\Controller\\DiemManager.cs",
+              "RelativeToolTip": "Controller\\DiemManager.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAYwDQAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T02:40:39.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\View\\MainForm.cs",
+              "RelativeDocumentMoniker": "View\\MainForm.cs",
+              "ToolTip": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\View\\MainForm.cs",
+              "RelativeToolTip": "View\\MainForm.cs",
+              "ViewState": "AQIAAIoAAAAAAAAAAAAAAHYAAAB/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T17:53:53.678Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Nguoi.cs",
               "DocumentMoniker": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\Model\\Nguoi.cs",
               "RelativeDocumentMoniker": "Model\\Nguoi.cs",
@@ -261,7 +211,79 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
+              "Title": "FormQuanLyDiem.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\View\\FormQuanLyDiem.cs",
+              "RelativeDocumentMoniker": "View\\FormQuanLyDiem.cs",
+              "ToolTip": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\View\\FormQuanLyDiem.cs [Design]",
+              "RelativeToolTip": "View\\FormQuanLyDiem.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T07:10:12.724Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "QuanLyLopHoc.cs",
+              "DocumentMoniker": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\Controller\\QuanLyLopHoc.cs",
+              "RelativeDocumentMoniker": "Controller\\QuanLyLopHoc.cs",
+              "ToolTip": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\Controller\\QuanLyLopHoc.cs",
+              "RelativeToolTip": "Controller\\QuanLyLopHoc.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACQAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T10:03:53.278Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MonHoc.cs",
+              "DocumentMoniker": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\Model\\MonHoc.cs",
+              "RelativeDocumentMoniker": "Model\\MonHoc.cs",
+              "ToolTip": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\Model\\MonHoc.cs",
+              "RelativeToolTip": "Model\\MonHoc.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T10:46:21.424Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\View\\MainForm.cs",
+              "RelativeDocumentMoniker": "View\\MainForm.cs",
+              "ToolTip": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\View\\MainForm.cs [Design]",
+              "RelativeToolTip": "View\\MainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T19:08:34.088Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "LopHoc.cs",
+              "DocumentMoniker": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\Model\\LopHoc.cs",
+              "RelativeDocumentMoniker": "Model\\LopHoc.cs",
+              "ToolTip": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\Model\\LopHoc.cs",
+              "RelativeToolTip": "Model\\LopHoc.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T19:27:16.454Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "HocSinh.cs",
+              "DocumentMoniker": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\Model\\HocSinh.cs",
+              "RelativeDocumentMoniker": "Model\\HocSinh.cs",
+              "ToolTip": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\Model\\HocSinh.cs",
+              "RelativeToolTip": "Model\\HocSinh.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T02:40:29.527Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -269,12 +291,11 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T11:22:17.11Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T11:22:17.11Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "GiaoVien.cs",
               "DocumentMoniker": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\Model\\GiaoVien.cs",
               "RelativeDocumentMoniker": "Model\\GiaoVien.cs",
@@ -282,33 +303,7 @@
               "RelativeToolTip": "Model\\GiaoVien.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T10:43:27.764Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "FormXemDiem.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\View\\FormXemDiem.Designer.cs",
-              "RelativeDocumentMoniker": "View\\FormXemDiem.Designer.cs",
-              "ToolTip": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\View\\FormXemDiem.Designer.cs",
-              "RelativeToolTip": "View\\FormXemDiem.Designer.cs",
-              "ViewState": "AQIAAGIAAAAAAAAAAAAAAJoAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T10:03:10.063Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "FormXemDiem.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\View\\FormXemDiem.cs",
-              "RelativeDocumentMoniker": "View\\FormXemDiem.cs",
-              "ToolTip": "C:\\Users\\vuxhng\\Downloads\\Score Manager System\\QuanLyDiem\\View\\FormXemDiem.cs [Design]",
-              "RelativeToolTip": "View\\FormXemDiem.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T10:00:14.016Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-03-19T10:43:27.764Z"
             },
             {
               "$type": "Document",
@@ -333,8 +328,7 @@
               "RelativeToolTip": "Controller\\QuanLyGiaoVien.cs",
               "ViewState": "AQIAAA4AAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T10:04:21.576Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T10:04:21.576Z"
             },
             {
               "$type": "Document",

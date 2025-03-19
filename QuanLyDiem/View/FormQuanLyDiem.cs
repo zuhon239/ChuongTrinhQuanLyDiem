@@ -149,7 +149,7 @@ namespace QuanLyDiem.View
         private void LoadDanhSachGiaoVien()
         {
             cboGiaoVien.Items.Clear();
-            var danhSachGiaoVien = quanLyGiaoVien.LayDanhSachGiaoVien();
+            List <GiaoVien> danhSachGiaoVien = quanLyGiaoVien.LayDanhSachGiaoVien();
             foreach (var giaoVien in danhSachGiaoVien)
             {
                 cboGiaoVien.Items.Add(new ComboBoxItem { Value = giaoVien.MaGV, Text = $"{giaoVien.HoTen} - {giaoVien.MonHoc?.TenMH ?? "Chưa phân môn"}" });
@@ -180,7 +180,7 @@ namespace QuanLyDiem.View
         private void LoadDanhSachLopDay()
         {
             cboLopHoc.Items.Clear();
-            var danhSachLopHoc = quanLyLopHoc.LayDanhSachLopHoc();
+           List <LopHoc> danhSachLopHoc = quanLyLopHoc.LayDanhSachLopHoc();
             foreach (var lopHoc in danhSachLopHoc)
             {
                 cboLopHoc.Items.Add(new ComboBoxItem { Value = lopHoc.MaLop, Text = lopHoc.TenLop });
@@ -200,7 +200,7 @@ namespace QuanLyDiem.View
         {
             if (giaoVienHienTai == null || giaoVienHienTai.MonHoc == null) return;
 
-            var danhSachHocSinh = hocSinhController.LayDanhSachHocSinh()
+            List <HocSinh> danhSachHocSinh = hocSinhController.LayDanhSachHocSinh()
                 .Where(hs => hs.LopHoc != null && hs.LopHoc.MaLop == maLop)
                 .ToList();
 
@@ -229,7 +229,7 @@ namespace QuanLyDiem.View
                     diemTB = diemSo.TinhDiemTB();
                 }
 
-                dt.Rows.Add(hocSinh.MaHS, hocSinh.HoTen, diemMieng, diem15Phut, diem1Tiet, diemHK, Math.Round(diemTB, 2));
+                dt.Rows.Add(hocSinh.MaHS, hocSinh.HoTen, diemMieng, diem15Phut, diem1Tiet, diemHK, Math.Round(diemTB, 1));
             }
 
             dgvDanhSachHocSinh.DataSource = dt;
@@ -371,7 +371,7 @@ namespace QuanLyDiem.View
                                 Diem15Phut = diemSo.Diem15Phut,
                                 Diem1Tiet = diemSo.Diem1Tiet,
                                 DiemHK = diemSo.DiemHK,
-                                DiemTB = Math.Round(diemSo.TinhDiemTB(), 2)
+                                DiemTB = Math.Round(diemSo.TinhDiemTB(), 1)
                             });
                         }
                     }
