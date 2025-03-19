@@ -216,7 +216,7 @@ namespace QuanLyDiem.View
 
             foreach (var hocSinh in danhSachHocSinh)
             {
-                var diemSo = quanLyDiem.TimDiemSo(hocSinh.MaHS, giaoVienHienTai.MonHoc.MaMH);
+                DiemSo diemSo = quanLyDiem.TimDiemSo(hocSinh.MaHS, giaoVienHienTai.MonHoc.MaMH);
 
                 double diemMieng = 0, diem15Phut = 0, diem1Tiet = 0, diemHK = 0, diemTB = 0;
 
@@ -280,10 +280,10 @@ namespace QuanLyDiem.View
                         return;
                     }
 
-                    var hocSinh = hocSinhController.TimHocSinhTheoMa(maHS);
+                    HocSinh hocSinh = hocSinhController.TimHocSinhTheoMa(maHS);
                     if (hocSinh != null)
                     {
-                        var diemSo = quanLyDiem.TimDiemSo(maHS, giaoVienHienTai.MonHoc.MaMH);
+                        DiemSo diemSo = quanLyDiem.TimDiemSo(maHS, giaoVienHienTai.MonHoc.MaMH);
 
                         if (diemSo != null)
                         {
@@ -326,7 +326,7 @@ namespace QuanLyDiem.View
                 foreach (DataRow row in dt.Rows)
                 {
                     string maHS = row["MaHS"].ToString();
-                    var diemSo = quanLyDiem.TimDiemSo(maHS, giaoVienHienTai.MonHoc.MaMH);
+                    DiemSo diemSo = quanLyDiem.TimDiemSo(maHS, giaoVienHienTai.MonHoc.MaMH);
                     if (diemSo != null)
                     {
                         row["DiemTB"] = Math.Round(diemSo.TinhDiemTB(), 2);
@@ -347,12 +347,12 @@ namespace QuanLyDiem.View
             try
             {
                 string maLop = ((ComboBoxItem)cboLopHoc.SelectedItem).Value;
-                var lopHoc = quanLyLopHoc.TimLopHocTheoMa(maLop);
+                LopHoc lopHoc = quanLyLopHoc.TimLopHocTheoMa(maLop);
 
                 if (lopHoc != null && giaoVienHienTai.MonHoc != null)
                 {
                     // Lấy danh sách học sinh có điểm số của môn học hiện tại trong lớp hiện tại
-                    var danhSachHocSinh = hocSinhController.LayDanhSachHocSinh()
+                    List <HocSinh> danhSachHocSinh = hocSinhController.LayDanhSachHocSinh()
                         .Where(hs => hs.LopHoc != null && hs.LopHoc.MaLop == maLop)
                         .ToList();
 
@@ -360,7 +360,7 @@ namespace QuanLyDiem.View
                     var danhSachDiem = new List<object>();
                     foreach (var hocSinh in danhSachHocSinh)
                     {
-                        var diemSo = quanLyDiem.TimDiemSo(hocSinh.MaHS, giaoVienHienTai.MonHoc.MaMH);
+                        DiemSo diemSo = quanLyDiem.TimDiemSo(hocSinh.MaHS, giaoVienHienTai.MonHoc.MaMH);
                         if (diemSo != null)
                         {
                             danhSachDiem.Add(new

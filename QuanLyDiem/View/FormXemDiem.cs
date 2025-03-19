@@ -192,7 +192,7 @@ namespace QuanLyDiem.View
             string maLop = ((ComboBoxItem)cboLopHoc.SelectedItem).Value;
             string maMH = cboMonHoc.SelectedItem != null ? ((ComboBoxItem)cboMonHoc.SelectedItem).Value : "ALL";
 
-            var danhSachHocSinh = hocSinhController.LayDanhSachHocSinh()
+            List <HocSinh> danhSachHocSinh = hocSinhController.LayDanhSachHocSinh()
                 .Where(hs => hs.LopHoc != null && hs.LopHoc.MaLop == maLop)
                 .ToList();
 
@@ -242,7 +242,7 @@ namespace QuanLyDiem.View
                     List<MonHoc> danhSachMonHoc = quanLyMonHoc.LayDanhSachMonHoc();
                     foreach (var monHoc in danhSachMonHoc)
                     {
-                        var diemSo = quanLyDiem.TimDiemSo(hocSinh.MaHS, monHoc.MaMH);
+                        DiemSo diemSo = quanLyDiem.TimDiemSo(hocSinh.MaHS, monHoc.MaMH);
                         if (diemSo != null)
                         {
                             double diemTB = Math.Round(diemSo.TinhDiemTB(), 1);
@@ -275,7 +275,7 @@ namespace QuanLyDiem.View
                 else
                 {
                     // Trường hợp xem 1 môn cụ thể
-                    var diemSo = quanLyDiem.TimDiemSo(hocSinh.MaHS, maMH);
+                    DiemSo diemSo = quanLyDiem.TimDiemSo(hocSinh.MaHS, maMH);
                     if (diemSo != null)
                     {
                         double diemTB = Math.Round(diemSo.TinhDiemTB(), 1);
@@ -340,7 +340,7 @@ namespace QuanLyDiem.View
                 dgvDanhSachHocSinh.Columns["XepLoai"].HeaderText = "Xếp Loại";
 
                 // Đặt tiêu đề cho các cột môn học
-                var danhSachMonHoc = quanLyMonHoc.LayDanhSachMonHoc();
+                List<MonHoc> danhSachMonHoc = quanLyMonHoc.LayDanhSachMonHoc();
                 foreach (var monHoc in danhSachMonHoc)
                 {
                     if (dgvDanhSachHocSinh.Columns.Contains(monHoc.MaMH))
