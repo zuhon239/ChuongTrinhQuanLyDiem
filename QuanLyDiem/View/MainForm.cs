@@ -17,7 +17,7 @@ namespace QuanLyDiem
         private QuanLyLopHoc lopHocController;
         //private MonHocController monHocController;
         //private DiemSoController diemSoController;
-        //private QuanLyDiemController quanLyDiemController;
+        private DiemManager quanlydiem;
 
         // Các thành phần giao diện (UI Components)
         private Label lblTitle;
@@ -141,7 +141,7 @@ namespace QuanLyDiem
             tableButtons.Controls.Add(this.btnQuanLyHocSinh, 0, 0);
 
             // Thiết lập nút Quản Lý Giáo Viên
-            this.btnQuanLyGiaoVien.Text = "Quản Lý Giáo Viên";
+            this.btnQuanLyGiaoVien.Text = "Xem điểm";
             this.btnQuanLyGiaoVien.Font = buttonFont;
             this.btnQuanLyGiaoVien.ForeColor = buttonTextColor;
             this.btnQuanLyGiaoVien.BackColor = Color.FromArgb(40, 167, 69); // Màu xanh lá
@@ -189,7 +189,7 @@ namespace QuanLyDiem
             this.btnQuanLyDiemSo.Dock = DockStyle.Fill;
             this.btnQuanLyDiemSo.Margin = buttonPadding;
             this.btnQuanLyDiemSo.Cursor = Cursors.Hand;
-            //this.btnQuanLyDiemSo.Click += btnQuanLyDiemSo_Click;
+            this.btnQuanLyDiemSo.Click += btnQuanLyDiemSo_Click;
             tableButtons.Controls.Add(this.btnQuanLyDiemSo, 0, 2);
 
             // Tạo ô trống cho căn đối trong lưới
@@ -281,8 +281,8 @@ namespace QuanLyDiem
         // Sự kiện click cho nút Quản lý Giáo viên
         private void btnQuanLyGiaoVien_Click(object sender, EventArgs e)
         {
-            Form1 giaoVienForm = new Form1();
-            giaoVienForm.ShowDialog();
+            FormXemDiem xemdiem = new FormXemDiem();
+            xemdiem.ShowDialog();
         }
 
         // Các phương thức xử lý sự kiện đã comment trong code gốc
@@ -298,11 +298,11 @@ namespace QuanLyDiem
         //    monHocForm.ShowDialog();
         //}
 
-        //private void btnQuanLyDiemSo_Click(object sender, EventArgs e)
-        //{
-        //    DiemSoForm diemSoForm = new DiemSoForm(diemSoController, quanLyDiemController);
-        //    diemSoForm.ShowDialog();
-        //}
+        private void btnQuanLyDiemSo_Click(object sender, EventArgs e)
+        {
+            FormQuanLyDiem diemSoForm = new FormQuanLyDiem();
+            diemSoForm.ShowDialog();
+        }
 
         // Sự kiện click cho nút Thoát
         private void btnThoat_Click(object sender, EventArgs e)

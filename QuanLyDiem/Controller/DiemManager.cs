@@ -9,11 +9,11 @@ using QuanLyDiem.Model;
 
 namespace QuanLyDiem.Controller
 {
-    public class QuanLyDiem
+    public class DiemManager
     {
         private List<DiemSo> danhSachDiemSo;
 
-        public QuanLyDiem()
+        public DiemManager()
         {
             danhSachDiemSo = new List<DiemSo>();
         }

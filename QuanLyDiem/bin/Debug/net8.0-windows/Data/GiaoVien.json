@@ -1,0 +1,62 @@
+[
+  {
+    "MaGV": "GV001",
+    "HoTen": "Nguyễn Văn A",
+    "NgaySinh": "1980-05-15",
+    "GioiTinh": "Nam",
+    "DiaChi": "Hà Nội",
+    "MonHoc": {
+      "MaMH": "MH001",
+      "TenMH": "Toán", 
+      "SoTiet": 45
+    }
+  },
+  {
+    "MaGV": "GV002",
+    "HoTen": "Trần Thị B",
+    "NgaySinh": "1985-08-20",
+    "GioiTinh": "Nữ",
+    "DiaChi": "Hồ Chí Minh",
+    "MonHoc": {
+      "MaMH": "MH002",
+      "TenMH": "Vật Lý",
+      "SoTiet": 30
+    }
+  },
+  {
+    "MaGV": "GV003",
+    "HoTen": "Lê Văn C",
+    "NgaySinh": "1982-03-10",
+    "GioiTinh": "Nam",
+    "DiaChi": "Đà Nẵng",
+    "MonHoc": {
+      "MaMH": "MH003",
+      "TenMH": "Hóa Học",
+      "SoTiet": 30
+    }
+  },
+  {
+    "MaGV": "GV004",
+    "HoTen": "Phạm Thị D",
+    "NgaySinh": "1984-11-25",
+    "GioiTinh": "Nữ",
+    "DiaChi": "Huế",
+    "MonHoc": {
+      "MaMH": "MH004",
+      "TenMH": "Ngữ Văn",
+      "SoTiet": 45
+    }
+  },
+  {
+    "MaGV": "GV005",
+    "HoTen": "Võ Minh E",
+    "NgaySinh": "1988-07-30",
+    "GioiTinh": "Nam",
+    "DiaChi": "Cần Thơ",
+    "MonHoc": {
+      "MaMH": "MH005",
+      "TenMH": "Tiếng Anh",
+      "SoTiet": 30
+    }
+  }
+]

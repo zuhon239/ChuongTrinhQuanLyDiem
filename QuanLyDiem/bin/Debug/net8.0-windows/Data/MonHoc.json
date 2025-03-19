@@ -1,0 +1,27 @@
+[
+  {
+    "MaMH": "MH001",
+    "TenMH": "Toán",
+    "SoTiet": 45
+  },
+  {
+    "MaMH": "MH002",
+    "TenMH": "Vật Lý",
+    "SoTiet": 30
+  },
+  {
+    "MaMH": "MH003",
+    "TenMH": "Hóa Học",
+    "SoTiet": 30
+  },
+  {
+    "MaMH": "MH004",
+    "TenMH": "Ngữ Văn",
+    "SoTiet": 45
+  },
+  {
+    "MaMH": "MH005",
+    "TenMH": "Tiếng Anh",
+    "SoTiet": 30
+  }
+]

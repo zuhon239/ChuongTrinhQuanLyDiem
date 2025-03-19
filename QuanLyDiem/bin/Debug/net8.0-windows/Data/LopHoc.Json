@@ -1,0 +1,50 @@
+[
+  {
+    "MaLop": "L001",
+    "TenLop": "10A1",
+    "GiaoVienChuNhiem": {
+      "MaGV": "GV001",
+      "HoTen": "Nguyễn Văn A",
+      "NgaySinh": "1980-05-15",
+      "GioiTinh": "Nam",
+      "DiaChi": "Hà Nội",
+      "MonHoc": {
+        "MaMH": "MH001",
+        "TenMH": "Toán",
+        "SoTiet": 45
+      }
+    }
+  },
+  {
+    "MaLop": "L002",
+    "TenLop": "10A2",
+    "GiaoVienChuNhiem": {
+      "MaGV": "GV002",
+      "HoTen": "Trần Thị B",
+      "NgaySinh": "1985-08-20",
+      "GioiTinh": "Nữ",
+      "DiaChi": "Hồ Chí Minh",
+      "MonHoc": {
+        "MaMH": "MH002",
+        "TenMH": "Vật Lý",
+        "SoTiet": 30
+      }
+    }
+  },
+  {
+    "MaLop": "L003",
+    "TenLop": "11A1",
+    "GiaoVienChuNhiem": {
+      "MaGV": "GV003",
+      "HoTen": "Lê Văn C",
+      "NgaySinh": "1982-03-10",
+      "GioiTinh": "Nam",
+      "DiaChi": "Đà Nẵng",
+      "MonHoc": {
+        "MaMH": "MH003",
+        "TenMH": "Hóa Học",
+        "SoTiet": 30
+      }
+    }
+  }
+]

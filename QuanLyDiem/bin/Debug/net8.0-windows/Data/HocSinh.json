@@ -1,0 +1,117 @@
+[
+  {
+    "MaHS": "HS001",
+    "HoTen": "Nguyễn Thị X",
+    "NgaySinh": "2005-02-15",
+    "GioiTinh": "Nữ",
+    "DiaChi": "Hà Nội",
+    "LopHoc": {
+      "MaLop": "L001",
+      "TenLop": "10A1",
+      "GiaoVienChuNhiem": {
+        "MaGV": "GV001",
+        "HoTen": "Nguyễn Văn A",
+        "NgaySinh": "1980-05-15",
+        "GioiTinh": "Nam",
+        "DiaChi": "Hà Nội",
+        "MonHoc": {
+          "MaMH": "MH001",
+          "TenMH": "Toán",
+          "SoTiet": 45
+        }
+      }
+    }
+  },
+  {
+    "MaHS": "HS002",
+    "HoTen": "Trần Văn Y",
+    "NgaySinh": "2005-06-22",
+    "GioiTinh": "Nam",
+    "DiaChi": "Hà Nội",
+    "LopHoc": {
+      "MaLop": "L001",
+      "TenLop": "10A1",
+      "GiaoVienChuNhiem": {
+        "MaGV": "GV001",
+        "HoTen": "Nguyễn Văn A",
+        "NgaySinh": "1980-05-15",
+        "GioiTinh": "Nam",
+        "DiaChi": "Hà Nội",
+        "MonHoc": {
+          "MaMH": "MH001",
+          "TenMH": "Toán",
+          "SoTiet": 45
+        }
+      }
+    }
+  },
+  {
+    "MaHS": "HS003",
+    "HoTen": "Lê Thị Z",
+    "NgaySinh": "2005-09-10",
+    "GioiTinh": "Nữ",
+    "DiaChi": "Hà Nội",
+    "LopHoc": {
+      "MaLop": "L001",
+      "TenLop": "10A1",
+      "GiaoVienChuNhiem": {
+        "MaGV": "GV001",
+        "HoTen": "Nguyễn Văn A",
+        "NgaySinh": "1980-05-15",
+        "GioiTinh": "Nam",
+        "DiaChi": "Hà Nội",
+        "MonHoc": {
+          "MaMH": "MH001",
+          "TenMH": "Toán",
+          "SoTiet": 45
+        }
+      }
+    }
+  },
+  {
+    "MaHS": "HS004",
+    "HoTen": "Phạm Văn W",
+    "NgaySinh": "2006-01-18",
+    "GioiTinh": "Nam",
+    "DiaChi": "Hồ Chí Minh",
+    "LopHoc": {
+      "MaLop": "L002",
+      "TenLop": "10A2",
+      "GiaoVienChuNhiem": {
+        "MaGV": "GV002",
+        "HoTen": "Trần Thị B",
+        "NgaySinh": "1985-08-20",
+        "GioiTinh": "Nữ",
+        "DiaChi": "Hồ Chí Minh",
+        "MonHoc": {
+          "MaMH": "MH002",
+          "TenMH": "Vật Lý",
+          "SoTiet": 30
+        }
+      }
+    }
+  },
+  {
+    "MaHS": "HS005",
+    "HoTen": "Võ Thị V",
+    "NgaySinh": "2006-04-25",
+    "GioiTinh": "Nữ",
+    "DiaChi": "Hồ Chí Minh",
+    "LopHoc": {
+      "MaLop": "L002",
+      "TenLop": "10A2",
+      "GiaoVienChuNhiem": {
+        "MaGV": "GV002",
+        "HoTen": "Trần Thị B",
+        "NgaySinh": "1985-08-20",
+        "GioiTinh": "Nữ",
+        "DiaChi": "Hồ Chí Minh",
+        "MonHoc": {
+          "MaMH": "MH002",
+          "TenMH": "Vật Lý",
+          "SoTiet": 30
+        }
+      }
+    }
+  }
+]

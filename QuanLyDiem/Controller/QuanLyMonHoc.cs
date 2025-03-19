@@ -32,5 +32,9 @@ namespace QuanLyDiem.Controller
             }
             return null;
         }
+        public List<MonHoc> LayDanhSachMonHoc()
+        {
+            return danhSachMonHoc;
+        }
     }
 }
