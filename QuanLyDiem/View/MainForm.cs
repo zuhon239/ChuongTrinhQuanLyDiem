@@ -6,42 +6,72 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing.Drawing2D;
 
 namespace QuanLyDiem
 {
     public partial class MainForm : Form
     {
         // Các controller
-        private HocSinhController hocSinhController;
-        //private GiaoVienController giaoVienController;
-        private QuanLyLopHoc lopHocController;
-        //private MonHocController monHocController;
-        //private DiemSoController diemSoController;
-        private DiemManager quanlydiem;
+        private DiemManager diemSoController;
 
         // Các thành phần giao diện (UI Components)
         private Label lblTitle;
+        private Label lblSubtitle;
         private Panel pnlHeader;
         private Panel pnlContent;
         private Panel pnlFooter;
-        private Button btnQuanLyHocSinh;
-        private Button btnQuanLyGiaoVien;
-        private Button btnQuanLyLopHoc;
-        private Button btnQuanLyMonHoc;
-        private Button btnQuanLyDiemSo;
+        private Button btnQuanLyDiem;
+        private Button btnXemDiem;
         private Button btnThoat;
+        private PictureBox picLogo;
 
         // Constructor
-        public MainForm(HocSinhController hsCtrl)
-        //, GiaoVienController gvCtrl, LopHocController lhCtrl,MonHocController mhCtrl, DiemSoController dsCtrl, QuanLyDiemController qldCtrl)
+        public MainForm()
         {
             InitializeComponent();
-            hocSinhController = hsCtrl;
-            //giaoVienController = gvCtrl;
-            //lopHocController = lhCtrl;
-            //monHocController = mhCtrl;
-            //diemSoController = dsCtrl;
-            //quanLyDiemController = qldCtrl;
+            this.Load += MainForm_Load;
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            // Áp dụng animation khi form mở
+            AnimateControls();
+        }
+
+        private void AnimateControls()
+        {
+            System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
+            timer.Interval = 30;
+            int opacity = 0;
+
+            pnlContent.Visible = false;
+            lblSubtitle.Visible = false;
+
+            // Lưu màu ban đầu
+            Color originalBackColor = pnlContent.BackColor;
+
+            timer.Tick += (s, e) => {
+                opacity += 5;
+                if (opacity == 5) pnlContent.Visible = true;
+                if (opacity == 25) lblSubtitle.Visible = true;
+
+                if (opacity >= 100)
+                {
+                    timer.Stop();
+                    timer.Dispose();
+                }
+                else
+                {
+                    lblTitle.ForeColor = Color.FromArgb(opacity, lblTitle.ForeColor);
+                    if (pnlContent.Visible)
+                        pnlContent.BackColor = Color.FromArgb(opacity, originalBackColor);
+                    if (lblSubtitle.Visible)
+                        lblSubtitle.ForeColor = Color.FromArgb(opacity, lblSubtitle.ForeColor);
+                }
+            };
+
+            timer.Start();
         }
 
         private void InitializeComponent()
@@ -51,54 +81,88 @@ namespace QuanLyDiem
             this.pnlContent = new Panel();
             this.pnlFooter = new Panel();
             this.lblTitle = new Label();
-            this.btnQuanLyHocSinh = new Button();
-            this.btnQuanLyGiaoVien = new Button();
-            this.btnQuanLyLopHoc = new Button();
-            this.btnQuanLyMonHoc = new Button();
-            this.btnQuanLyDiemSo = new Button();
+            this.lblSubtitle = new Label();
+            this.btnQuanLyDiem = new Button();
+            this.btnXemDiem = new Button();
             this.btnThoat = new Button();
+            this.picLogo = new PictureBox();
 
             // Thiết lập thuộc tính cho Form
-            this.Text = "Quản Lý Điểm Trường Phổ Thông";
-            this.Size = new Size(800, 600);
+            this.Text = "Quản Lý Điểm Trường THPT Lý Thường Kiệt";
+            this.Size = new Size(900, 600);
             this.StartPosition = FormStartPosition.CenterScreen;
-            this.BackColor = Color.FromArgb(240, 240, 240);
+            this.BackColor = Color.FromArgb(245, 245, 247);
             this.Font = new Font("Segoe UI", 10F, FontStyle.Regular);
-            this.MinimumSize = new Size(600, 500);
+            this.MinimumSize = new Size(800, 550);
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Icon = SystemIcons.Application;
 
             // Thiết lập Panel Header
             this.pnlHeader.Dock = DockStyle.Top;
-            this.pnlHeader.Height = 80;
-            this.pnlHeader.BackColor = Color.FromArgb(0, 122, 204); // Màu xanh Microsoft
-            this.pnlHeader.Padding = new Padding(10);
+            this.pnlHeader.Height = 140;
+            this.pnlHeader.BackColor = Color.FromArgb(44, 62, 80); // Màu tối hiện đại
+            this.pnlHeader.Padding = new Padding(20);
             this.Controls.Add(this.pnlHeader);
 
+            // Thiết lập Logo
+            this.picLogo = new PictureBox();
+            this.picLogo.Size = new Size(64, 64);
+            this.picLogo.Location = new Point(20, 30);
+            this.picLogo.SizeMode = PictureBoxSizeMode.StretchImage;
+            // Tạo logo đơn giản
+            Bitmap logoBitmap = new Bitmap(64, 64);
+            using (Graphics g = Graphics.FromImage(logoBitmap))
+            {
+                g.Clear(Color.FromArgb(52, 152, 219));
+                g.FillEllipse(new SolidBrush(Color.White), 10, 10, 44, 44);
+                g.DrawString("LTK", new Font("Arial", 14, FontStyle.Bold), new SolidBrush(Color.FromArgb(52, 152, 219)), 12, 18);
+            }
+            this.picLogo.Image = logoBitmap;
+            this.pnlHeader.Controls.Add(this.picLogo);
+
+            // Panel cho tiêu đề
+            Panel titlePanel = new Panel();
+            titlePanel.Location = new Point(95, 20);
+            titlePanel.Size = new Size(650, 100);
+            titlePanel.BackColor = Color.Transparent;
+            this.pnlHeader.Controls.Add(titlePanel);
+
             // Thiết lập Label Title
-            this.lblTitle.Text = "HỆ THỐNG QUẢN LÝ ĐIỂM TRƯỜNG PHỔ THÔNG";
-            this.lblTitle.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            this.lblTitle.Text = "HỆ THỐNG QUẢN LÝ ĐIỂM";
+            this.lblTitle.Font = new Font("Segoe UI", 22F, FontStyle.Bold);
             this.lblTitle.ForeColor = Color.White;
-            this.lblTitle.TextAlign = ContentAlignment.MiddleCenter;
-            this.lblTitle.Dock = DockStyle.Fill;
-            this.pnlHeader.Controls.Add(this.lblTitle);
+            this.lblTitle.TextAlign = ContentAlignment.BottomLeft;
+            this.lblTitle.Dock = DockStyle.Top;
+            this.lblTitle.Height = 50;
+            titlePanel.Controls.Add(this.lblTitle);
+
+            // Thiết lập Label Subtitle
+            this.lblSubtitle.Text = "TRƯỜNG THPT LÝ THƯỜNG KIỆT";
+            this.lblSubtitle.Font = new Font("Segoe UI Light", 14F, FontStyle.Regular);
+            this.lblSubtitle.ForeColor = Color.FromArgb(189, 195, 199);
+            this.lblSubtitle.TextAlign = ContentAlignment.TopLeft;
+            this.lblSubtitle.Dock = DockStyle.Bottom;
+            this.lblSubtitle.Height = 30;
+            titlePanel.Controls.Add(this.lblSubtitle);
 
             // Thiết lập Panel Content
             this.pnlContent.Dock = DockStyle.Fill;
-            this.pnlContent.Padding = new Padding(10);
-            this.pnlContent.BackColor = Color.White;
+            this.pnlContent.Padding = new Padding(40);
+            this.pnlContent.BackColor = Color.FromArgb(245, 245, 247);
             this.Controls.Add(this.pnlContent);
 
             // Thiết lập Panel Footer
             this.pnlFooter.Dock = DockStyle.Bottom;
-            this.pnlFooter.Height = 60;
-            this.pnlFooter.BackColor = Color.FromArgb(230, 230, 230);
-            this.pnlFooter.Padding = new Padding(10);
+            this.pnlFooter.Height = 70;
+            this.pnlFooter.BackColor = Color.FromArgb(236, 240, 241);
+            this.pnlFooter.Padding = new Padding(20);
             this.Controls.Add(this.pnlFooter);
 
             // Thiết lập nút Thoát ở Footer
             this.btnThoat.Text = "Thoát";
             this.btnThoat.Font = new Font("Segoe UI", 10F, FontStyle.Regular);
-            this.btnThoat.BackColor = Color.FromArgb(220, 53, 69); // Màu đỏ
+            this.btnThoat.BackColor = Color.FromArgb(231, 76, 60); // Màu đỏ hiện đại
             this.btnThoat.ForeColor = Color.White;
             this.btnThoat.FlatStyle = FlatStyle.Flat;
             this.btnThoat.FlatAppearance.BorderSize = 0;
@@ -108,135 +172,166 @@ namespace QuanLyDiem
             this.btnThoat.Click += btnThoat_Click;
             this.pnlFooter.Controls.Add(this.btnThoat);
 
-            // Tạo TableLayoutPanel để chứa các nút và thích ứng với kích thước
-            TableLayoutPanel tableButtons = new TableLayoutPanel();
-            tableButtons.Dock = DockStyle.Fill;
-            tableButtons.RowCount = 3;
-            tableButtons.ColumnCount = 2;
-            tableButtons.RowStyles.Add(new RowStyle(SizeType.Percent, 33.33F));
-            tableButtons.RowStyles.Add(new RowStyle(SizeType.Percent, 33.33F));
-            tableButtons.RowStyles.Add(new RowStyle(SizeType.Percent, 33.33F));
-            tableButtons.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableButtons.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableButtons.Padding = new Padding(5);
-            this.pnlContent.Controls.Add(tableButtons);
+            // Thêm thông tin phiên bản vào footer
+            Label lblVersion = new Label();
+            lblVersion.Text = "Phiên bản 2.0 | Năm học 2024-2025";
+            lblVersion.ForeColor = Color.FromArgb(127, 140, 141);
+            lblVersion.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            lblVersion.AutoSize = true;
+            lblVersion.Location = new Point(20, 25);
+            this.pnlFooter.Controls.Add(lblVersion);
 
-            // Thiết lập Style chung cho các nút chức năng
-            Font buttonFont = new Font("Segoe UI", 12F, FontStyle.Bold);
-            Color buttonTextColor = Color.White;
-            FlatStyle buttonStyle = FlatStyle.Flat;
-            Padding buttonPadding = new Padding(5);
+            // Tạo card layout để chứa các nút chức năng
+            TableLayoutPanel cardLayout = new TableLayoutPanel();
+            cardLayout.Dock = DockStyle.Fill;
+            cardLayout.ColumnCount = 2;
+            cardLayout.RowCount = 1;
+            cardLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            cardLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            cardLayout.Padding = new Padding(10);
+            this.pnlContent.Controls.Add(cardLayout);
 
-            // Thiết lập nút Quản Lý Học Sinh
-            this.btnQuanLyHocSinh.Text = "Quản Lý Học Sinh";
-            this.btnQuanLyHocSinh.Font = buttonFont;
-            this.btnQuanLyHocSinh.ForeColor = buttonTextColor;
-            this.btnQuanLyHocSinh.BackColor = Color.FromArgb(0, 123, 255); // Màu xanh
-            this.btnQuanLyHocSinh.FlatStyle = buttonStyle;
-            this.btnQuanLyHocSinh.FlatAppearance.BorderSize = 0;
-            this.btnQuanLyHocSinh.Dock = DockStyle.Fill;
-            this.btnQuanLyHocSinh.Margin = buttonPadding;
-            this.btnQuanLyHocSinh.Cursor = Cursors.Hand;
-            this.btnQuanLyHocSinh.Click += btnQuanLyHocSinh_Click;
-            tableButtons.Controls.Add(this.btnQuanLyHocSinh, 0, 0);
+            // Tạo card cho nút Quản Lý Điểm
+            Panel cardQuanLyDiem = CreateCard("Quản Lý Điểm", "Nhập, chỉnh sửa và quản lý điểm số của học sinh",
+                Color.FromArgb(41, 128, 185), "📊");
+            this.btnQuanLyDiem = (Button)cardQuanLyDiem.Tag;
+            this.btnQuanLyDiem.Click += btnQuanLyDiem_Click;
+            cardLayout.Controls.Add(cardQuanLyDiem, 0, 0);
 
-            // Thiết lập nút Quản Lý Giáo Viên
-            this.btnQuanLyGiaoVien.Text = "Xem điểm";
-            this.btnQuanLyGiaoVien.Font = buttonFont;
-            this.btnQuanLyGiaoVien.ForeColor = buttonTextColor;
-            this.btnQuanLyGiaoVien.BackColor = Color.FromArgb(40, 167, 69); // Màu xanh lá
-            this.btnQuanLyGiaoVien.FlatStyle = buttonStyle;
-            this.btnQuanLyGiaoVien.FlatAppearance.BorderSize = 0;
-            this.btnQuanLyGiaoVien.Dock = DockStyle.Fill;
-            this.btnQuanLyGiaoVien.Margin = buttonPadding;
-            this.btnQuanLyGiaoVien.Cursor = Cursors.Hand;
-            this.btnQuanLyGiaoVien.Click += btnQuanLyGiaoVien_Click;
-            tableButtons.Controls.Add(this.btnQuanLyGiaoVien, 1, 0);
+            // Tạo card cho nút Xem Điểm
+            Panel cardXemDiem = CreateCard("Xem Điểm", "Tra cứu và xem bảng điểm học sinh theo lớp và môn học",
+                Color.FromArgb(46, 204, 113), "🔍");
+            this.btnXemDiem = (Button)cardXemDiem.Tag;
+            this.btnXemDiem.Click += btnXemDiem_Click;
+            cardLayout.Controls.Add(cardXemDiem, 1, 0);
 
-            // Thiết lập nút Quản Lý Lớp Học
-            this.btnQuanLyLopHoc.Text = "Quản Lý Lớp Học";
-            this.btnQuanLyLopHoc.Font = buttonFont;
-            this.btnQuanLyLopHoc.ForeColor = buttonTextColor;
-            this.btnQuanLyLopHoc.BackColor = Color.FromArgb(255, 193, 7); // Màu vàng
-            this.btnQuanLyLopHoc.FlatStyle = buttonStyle;
-            this.btnQuanLyLopHoc.FlatAppearance.BorderSize = 0;
-            this.btnQuanLyLopHoc.Dock = DockStyle.Fill;
-            this.btnQuanLyLopHoc.Margin = buttonPadding;
-            this.btnQuanLyLopHoc.Cursor = Cursors.Hand;
-            //this.btnQuanLyLopHoc.Click += btnQuanLyLopHoc_Click;
-            tableButtons.Controls.Add(this.btnQuanLyLopHoc, 0, 1);
-
-            // Thiết lập nút Quản Lý Môn Học
-            this.btnQuanLyMonHoc.Text = "Quản Lý Môn Học";
-            this.btnQuanLyMonHoc.Font = buttonFont;
-            this.btnQuanLyMonHoc.ForeColor = buttonTextColor;
-            this.btnQuanLyMonHoc.BackColor = Color.FromArgb(111, 66, 193); // Màu tím
-            this.btnQuanLyMonHoc.FlatStyle = buttonStyle;
-            this.btnQuanLyMonHoc.FlatAppearance.BorderSize = 0;
-            this.btnQuanLyMonHoc.Dock = DockStyle.Fill;
-            this.btnQuanLyMonHoc.Margin = buttonPadding;
-            this.btnQuanLyMonHoc.Cursor = Cursors.Hand;
-            //this.btnQuanLyMonHoc.Click += btnQuanLyMonHoc_Click;
-            tableButtons.Controls.Add(this.btnQuanLyMonHoc, 1, 1);
-
-            // Thiết lập nút Quản Lý Điểm Số
-            this.btnQuanLyDiemSo.Text = "Quản Lý Điểm Số";
-            this.btnQuanLyDiemSo.Font = buttonFont;
-            this.btnQuanLyDiemSo.ForeColor = buttonTextColor;
-            this.btnQuanLyDiemSo.BackColor = Color.FromArgb(23, 162, 184); // Màu xanh dương
-            this.btnQuanLyDiemSo.FlatStyle = buttonStyle;
-            this.btnQuanLyDiemSo.FlatAppearance.BorderSize = 0;
-            this.btnQuanLyDiemSo.Dock = DockStyle.Fill;
-            this.btnQuanLyDiemSo.Margin = buttonPadding;
-            this.btnQuanLyDiemSo.Cursor = Cursors.Hand;
-            this.btnQuanLyDiemSo.Click += btnQuanLyDiemSo_Click;
-            tableButtons.Controls.Add(this.btnQuanLyDiemSo, 0, 2);
-
-            // Tạo ô trống cho căn đối trong lưới
-            tableButtons.SetColumnSpan(this.btnQuanLyDiemSo, 2);
-
-            // Thêm hiệu ứng hover cho các nút
-            this.btnQuanLyHocSinh.MouseEnter += new EventHandler(Button_MouseEnter);
-            this.btnQuanLyHocSinh.MouseLeave += new EventHandler(Button_MouseLeave);
-            this.btnQuanLyGiaoVien.MouseEnter += new EventHandler(Button_MouseEnter);
-            this.btnQuanLyGiaoVien.MouseLeave += new EventHandler(Button_MouseLeave);
-            this.btnQuanLyLopHoc.MouseEnter += new EventHandler(Button_MouseEnter);
-            this.btnQuanLyLopHoc.MouseLeave += new EventHandler(Button_MouseLeave);
-            this.btnQuanLyMonHoc.MouseEnter += new EventHandler(Button_MouseEnter);
-            this.btnQuanLyMonHoc.MouseLeave += new EventHandler(Button_MouseLeave);
-            this.btnQuanLyDiemSo.MouseEnter += new EventHandler(Button_MouseEnter);
-            this.btnQuanLyDiemSo.MouseLeave += new EventHandler(Button_MouseLeave);
+            // Thêm hiệu ứng hover cho nút thoát
             this.btnThoat.MouseEnter += new EventHandler(Button_MouseEnter);
             this.btnThoat.MouseLeave += new EventHandler(Button_MouseLeave);
 
             // Đăng ký sự kiện thay đổi kích thước form
             this.Resize += new EventHandler(MainForm_Resize);
         }
+
+        // Phương thức tạo card UI
+        private Panel CreateCard(string title, string description, Color color, string emoji)
+        {
+            Panel card = new Panel();
+            card.Margin = new Padding(15);
+            card.BackColor = Color.White;
+            card.Size = new Size(300, 250);
+            card.Padding = new Padding(20);
+            // Thêm đổ bóng
+            card.Paint += (sender, e) => {
+                Rectangle rect = new Rectangle(0, 0, card.Width, card.Height);
+                using (GraphicsPath path = RoundedRect(rect, 10))
+                {
+                    e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+                    using (SolidBrush brush = new SolidBrush(card.BackColor))
+                    {
+                        e.Graphics.FillPath(brush, path);
+                    }
+                }
+            };
+
+            // Nhãn emoji
+            Label lblEmoji = new Label();
+            lblEmoji.Text = emoji;
+            lblEmoji.Font = new Font("Segoe UI", 32F, FontStyle.Regular);
+            lblEmoji.AutoSize = true;
+            lblEmoji.Location = new Point(20, 20);
+            card.Controls.Add(lblEmoji);
+
+            // Nhãn tiêu đề
+            Label lblTitle = new Label();
+            lblTitle.Text = title;
+            lblTitle.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            lblTitle.ForeColor = Color.FromArgb(44, 62, 80);
+            lblTitle.Location = new Point(20, 85);
+            lblTitle.AutoSize = true;
+            card.Controls.Add(lblTitle);
+
+            // Nhãn mô tả
+            Label lblDescription = new Label();
+            lblDescription.Text = description;
+            lblDescription.Font = new Font("Segoe UI", 10F, FontStyle.Regular);
+            lblDescription.ForeColor = Color.FromArgb(127, 140, 141);
+            lblDescription.Location = new Point(20, 120);
+            lblDescription.Size = new Size(260, 60);
+            card.Controls.Add(lblDescription);
+
+            // Nút chức năng
+            Button btnFunction = new Button();
+            btnFunction.Text = "Mở " + title;
+            btnFunction.Font = new Font("Segoe UI", 10F, FontStyle.Regular);
+            btnFunction.ForeColor = Color.White;
+            btnFunction.BackColor = color;
+            btnFunction.FlatStyle = FlatStyle.Flat;
+            btnFunction.FlatAppearance.BorderSize = 0;
+            btnFunction.Size = new Size(260, 45);
+            btnFunction.Location = new Point(20, 185);
+            btnFunction.Cursor = Cursors.Hand;
+
+            // Hiệu ứng hover cho nút
+            btnFunction.MouseEnter += (sender, e) => {
+                btnFunction.BackColor = ControlPaint.Light(color, 0.2f);
+            };
+            btnFunction.MouseLeave += (sender, e) => {
+                btnFunction.BackColor = color;
+            };
+
+            card.Controls.Add(btnFunction);
+
+            // Lưu tham chiếu button vào Tag của card
+            card.Tag = btnFunction;
+
+            return card;
+        }
+
+        // Tạo GraphicsPath cho hình chữ nhật bo góc
+        private GraphicsPath RoundedRect(Rectangle bounds, int radius)
+        {
+            int diameter = radius * 2;
+            Size size = new Size(diameter, diameter);
+            Rectangle arc = new Rectangle(bounds.Location, size);
+            GraphicsPath path = new GraphicsPath();
+
+            // Top left arc  
+            path.AddArc(arc, 180, 90);
+
+            // Top right arc  
+            arc.X = bounds.Right - diameter;
+            path.AddArc(arc, 270, 90);
+
+            // Bottom right arc  
+            arc.Y = bounds.Bottom - diameter;
+            path.AddArc(arc, 0, 90);
+
+            // Bottom left arc 
+            arc.X = bounds.Left;
+            path.AddArc(arc, 90, 90);
+
+            path.CloseFigure();
+            return path;
+        }
+
         // Xử lý sự kiện thay đổi kích thước form
         private void MainForm_Resize(object sender, EventArgs e)
         {
             // Điều chỉnh kích thước font cho phù hợp với kích thước form
-            if (this.Width < 700)
+            if (this.Width < 800)
             {
-                this.lblTitle.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
-                this.btnQuanLyHocSinh.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-                this.btnQuanLyGiaoVien.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-                this.btnQuanLyLopHoc.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-                this.btnQuanLyMonHoc.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-                this.btnQuanLyDiemSo.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+                this.lblTitle.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+                this.lblSubtitle.Font = new Font("Segoe UI Light", 12F, FontStyle.Regular);
             }
             else
             {
-                this.lblTitle.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
-                this.btnQuanLyHocSinh.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-                this.btnQuanLyGiaoVien.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-                this.btnQuanLyLopHoc.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-                this.btnQuanLyMonHoc.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-                this.btnQuanLyDiemSo.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+                this.lblTitle.Font = new Font("Segoe UI", 22F, FontStyle.Bold);
+                this.lblSubtitle.Font = new Font("Segoe UI Light", 14F, FontStyle.Regular);
             }
         }
 
-        // Xử lý sự kiện hover vào nút
+        // Xử lý sự kiện hover vào nút thoát
         private void Button_MouseEnter(object sender, EventArgs e)
         {
             Button btn = sender as Button;
@@ -246,62 +341,34 @@ namespace QuanLyDiem
                 if (btn.Tag == null)
                     btn.Tag = btn.BackColor;
 
-                // Làm sáng màu nút khi hover
-                Color originalColor = (Color)btn.Tag;
-                int r = Math.Min(originalColor.R + 20, 255);
-                int g = Math.Min(originalColor.G + 20, 255);
-                int b = Math.Min(originalColor.B + 20, 255);
-                btn.BackColor = Color.FromArgb(r, g, b);
-
-                // Thêm hiệu ứng khi hover
-                btn.FlatAppearance.BorderSize = 1;
-                btn.FlatAppearance.BorderColor = Color.White;
+                // Làm đậm màu nút khi hover
+                btn.BackColor = Color.FromArgb(192, 57, 43); // Đỏ đậm hơn
             }
         }
 
-        // Xử lý sự kiện rời khỏi nút
+        // Xử lý sự kiện rời khỏi nút thoát
         private void Button_MouseLeave(object sender, EventArgs e)
         {
             Button btn = sender as Button;
             if (btn != null && btn.Tag != null)
             {
                 // Khôi phục màu gốc
-                btn.BackColor = (Color)btn.Tag;
-                btn.FlatAppearance.BorderSize = 0;
+                btn.BackColor = Color.FromArgb(231, 76, 60); // Màu đỏ gốc
             }
         }
 
-        // Sự kiện click cho nút Quản lý Học sinh
-        private void btnQuanLyHocSinh_Click(object sender, EventArgs e)
-        {
-            FormQuanLyHocSinh hocSinhForm = new FormQuanLyHocSinh(hocSinhController, lopHocController);
-            hocSinhForm.ShowDialog();
-        }
-
-        // Sự kiện click cho nút Quản lý Giáo viên
-        private void btnQuanLyGiaoVien_Click(object sender, EventArgs e)
-        {
-            FormXemDiem xemdiem = new FormXemDiem();
-            xemdiem.ShowDialog();
-        }
-
-        // Các phương thức xử lý sự kiện đã comment trong code gốc
-        //private void btnQuanLyLopHoc_Click(object sender, EventArgs e)
-        //{
-        //    LopHocForm lopHocForm = new LopHocForm(lopHocController);
-        //    lopHocForm.ShowDialog();
-        //}
-
-        //private void btnQuanLyMonHoc_Click(object sender, EventArgs e)
-        //{
-        //    MonHocForm monHocForm = new MonHocForm(monHocController);
-        //    monHocForm.ShowDialog();
-        //}
-
-        private void btnQuanLyDiemSo_Click(object sender, EventArgs e)
+        // Sự kiện click cho nút Quản lý Điểm
+        private void btnQuanLyDiem_Click(object sender, EventArgs e)
         {
             FormQuanLyDiem diemSoForm = new FormQuanLyDiem();
             diemSoForm.ShowDialog();
+        }
+
+        // Sự kiện click cho nút Xem Điểm
+        private void btnXemDiem_Click(object sender, EventArgs e)
+        {
+            FormXemDiem xemDiemForm = new FormXemDiem();
+            xemDiemForm.ShowDialog();
         }
 
         // Sự kiện click cho nút Thoát
@@ -319,6 +386,5 @@ namespace QuanLyDiem
                 Application.Exit();
             }
         }
-
     }
 }

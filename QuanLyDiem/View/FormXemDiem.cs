@@ -242,7 +242,7 @@ namespace QuanLyDiem.View
                         var diemSo = quanLyDiem.TimDiemSo(hocSinh.MaHS, monHoc.MaMH);
                         if (diemSo != null)
                         {
-                            double diemTB = Math.Round(diemSo.TinhDiemTB(), 2);
+                            double diemTB = Math.Round(diemSo.TinhDiemTB(), 1);
                             row[monHoc.MaMH] = diemTB;
                             tongDiem += diemTB;
                             soMonCoTheDiemDuoc++;
@@ -256,7 +256,7 @@ namespace QuanLyDiem.View
                     // Tính điểm trung bình chung
                     if (soMonCoTheDiemDuoc > 0)
                     {
-                        row["DiemTBChung"] = Math.Round(tongDiem / soMonCoTheDiemDuoc, 2);
+                        row["DiemTBChung"] = Math.Round(tongDiem / soMonCoTheDiemDuoc, 1);
                     }
                     else
                     {
@@ -269,7 +269,7 @@ namespace QuanLyDiem.View
                 {
                     // Trường hợp xem 1 môn cụ thể
                     var diemSo = quanLyDiem.TimDiemSo(hocSinh.MaHS, maMH);
-                    double diemTB = diemSo != null ? Math.Round(diemSo.TinhDiemTB(), 2) : 0;
+                    double diemTB = diemSo != null ? Math.Round(diemSo.TinhDiemTB(), 1) : 0;
 
                     // Chỉ hiển thị nếu có điểm
                     DataRow row = dt.NewRow();

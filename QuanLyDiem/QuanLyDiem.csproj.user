@@ -4,13 +4,7 @@
     <Compile Update="View\FormQuanLyDiem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="View\FormQuanLyHocSinh.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="View\FormXemDiem.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="View\HocSinhForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="View\MainForm.cs">

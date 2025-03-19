@@ -7,12 +7,7 @@
       "HoTen": "Nguyễn Văn A",
       "NgaySinh": "1980-05-15",
       "GioiTinh": "Nam",
-      "DiaChi": "Hà Nội",
-      "MonHoc": {
-        "MaMH": "MH001",
-        "TenMH": "Toán",
-        "SoTiet": 45
-      }
+      "DiaChi": "Hà Nội"
     }
   },
   {
@@ -23,12 +18,7 @@
       "HoTen": "Trần Thị B",
       "NgaySinh": "1985-08-20",
       "GioiTinh": "Nữ",
-      "DiaChi": "Hồ Chí Minh",
-      "MonHoc": {
-        "MaMH": "MH002",
-        "TenMH": "Vật Lý",
-        "SoTiet": 30
-      }
+      "DiaChi": "Hồ Chí Minh"
     }
   },
   {
@@ -39,12 +29,41 @@
       "HoTen": "Lê Văn C",
       "NgaySinh": "1982-03-10",
       "GioiTinh": "Nam",
-      "DiaChi": "Đà Nẵng",
-      "MonHoc": {
-        "MaMH": "MH003",
-        "TenMH": "Hóa Học",
-        "SoTiet": 30
-      }
+      "DiaChi": "Đà Nẵng"
+    }
+  },
+  {
+    "MaLop": "L004",
+    "TenLop": "11A2",
+    "GiaoVienChuNhiem": {
+     "MaGV": "GV004",
+    "HoTen": "Phạm Thị Dương",
+    "NgaySinh": "1984-11-25",
+    "GioiTinh": "Nữ",
+    "DiaChi": "Huế"
+    }
+  },
+ {
+    "MaLop": "L005",
+    "TenLop": "12A1",
+    "GiaoVienChuNhiem": {
+      "MaGV": "GV005",
+    "HoTen": "Võ Minh Đạt",
+    "NgaySinh": "1988-07-30",
+    "GioiTinh": "Nam",
+    "DiaChi": "Cần Thơ"
+    }
+  },
+{
+    "MaLop": "L006",
+    "TenLop": "12A2",
+    "GiaoVienChuNhiem": {
+     "MaGV": "GV006",
+    "HoTen": "Lý Văn Sáng",
+    "NgaySinh": "1983-12-15",
+    "GioiTinh": "Nam",
+    "DiaChi": "TPHCM"
+
     }
   }
 ]

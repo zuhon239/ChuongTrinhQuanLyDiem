@@ -76,8 +76,6 @@ C:\Users\vuxhng\Downloads\Score Manager System\QuanLyDiem\bin\Debug\net8.0-windo
 C:\Users\vuxhng\Downloads\Score Manager System\QuanLyDiem\bin\Debug\net8.0-windows\QuanLyDiem.runtimeconfig.json
 C:\Users\vuxhng\Downloads\Score Manager System\QuanLyDiem\bin\Debug\net8.0-windows\QuanLyDiem.dll
 C:\Users\vuxhng\Downloads\Score Manager System\QuanLyDiem\bin\Debug\net8.0-windows\QuanLyDiem.pdb
-C:\Users\vuxhng\Downloads\Score Manager System\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.View.FormQuanLyHocSinh.resources
-C:\Users\vuxhng\Downloads\Score Manager System\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.View.HocSinhForm.resources
 C:\Users\vuxhng\Downloads\Score Manager System\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.MainForm.resources
 C:\Users\vuxhng\Downloads\Score Manager System\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.csproj.GenerateResource.cache
 C:\Users\vuxhng\Downloads\Score Manager System\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.GeneratedMSBuildEditorConfig.editorconfig
@@ -91,3 +89,4 @@ C:\Users\vuxhng\Downloads\Score Manager System\QuanLyDiem\obj\Debug\net8.0-windo
 C:\Users\vuxhng\Downloads\Score Manager System\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.genruntimeconfig.cache
 C:\Users\vuxhng\Downloads\Score Manager System\QuanLyDiem\obj\Debug\net8.0-windows\ref\QuanLyDiem.dll
 C:\Users\vuxhng\Downloads\Score Manager System\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.View.FormQuanLyDiem.resources
+C:\Users\vuxhng\Downloads\Score Manager System\QuanLyDiem\obj\Debug\net8.0-windows\QuanLyDiem.View.FormXemDiem.resources
