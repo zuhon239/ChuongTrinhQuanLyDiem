@@ -29,11 +29,88 @@
     "DiaChi": "Hà Nội",
     "LopHoc": {
       "MaLop": "L001",
-      "TenLop": "10A1"    
-   }
+      "TenLop": "10A1"
+    }
   },
   {
     "MaHS": "HS004",
+    "HoTen": "Nguyễn Văn An",
+    "NgaySinh": "2005-03-12",
+    "GioiTinh": "Nam",
+    "DiaChi": "Hà Nội",
+    "LopHoc": {
+      "MaLop": "L001",
+      "TenLop": "10A1"
+    }
+  },
+  {
+    "MaHS": "HS005",
+    "HoTen": "Phạm Thị Lan",
+    "NgaySinh": "2005-07-05",
+    "GioiTinh": "Nữ",
+    "DiaChi": "Hà Nội",
+    "LopHoc": {
+      "MaLop": "L001",
+      "TenLop": "10A1"
+    }
+  },
+  {
+    "MaHS": "HS006",
+    "HoTen": "Vũ Minh Tân",
+    "NgaySinh": "2005-08-25",
+    "GioiTinh": "Nam",
+    "DiaChi": "Hà Nội",
+    "LopHoc": {
+      "MaLop": "L001",
+      "TenLop": "10A1"
+    }
+  },
+  {
+    "MaHS": "HS007",
+    "HoTen": "Bùi Quỳnh Anh",
+    "NgaySinh": "2005-04-19",
+    "GioiTinh": "Nữ",
+    "DiaChi": "Hà Nội",
+    "LopHoc": {
+      "MaLop": "L001",
+      "TenLop": "10A1"
+    }
+  },
+  {
+    "MaHS": "HS008",
+    "HoTen": "Lê Minh Đức",
+    "NgaySinh": "2005-10-30",
+    "GioiTinh": "Nam",
+    "DiaChi": "Hà Nội",
+    "LopHoc": {
+      "MaLop": "L001",
+      "TenLop": "10A1"
+    }
+  },
+  {
+    "MaHS": "HS009",
+    "HoTen": "Hoàng Thanh Hương",
+    "NgaySinh": "2005-01-14",
+    "GioiTinh": "Nữ",
+    "DiaChi": "Hà Nội",
+    "LopHoc": {
+      "MaLop": "L001",
+      "TenLop": "10A1"
+    }
+  },
+  {
+    "MaHS": "HS010",
+    "HoTen": "Nguyễn Thị Lan Anh",
+    "NgaySinh": "2005-12-08",
+    "GioiTinh": "Nữ",
+    "DiaChi": "Hà Nội",
+    "LopHoc": {
+      "MaLop": "L001",
+      "TenLop": "10A1"
+    }
+  },  
+  {
+    "MaHS": "HS011",
     "HoTen": "Phạm Văn Vinh",
     "NgaySinh": "2006-01-18",
     "GioiTinh": "Nam",
@@ -44,7 +121,7 @@
     }
   },
   {
-    "MaHS": "HS005",
+    "MaHS": "HS012",
     "HoTen": "Trương Ánh Linh",
     "NgaySinh": "2006-04-25",
     "GioiTinh": "Nữ",
@@ -55,7 +132,7 @@
     }
   },
 {
-    "MaHS": "HS006",
+    "MaHS": "HS013",
     "HoTen": "Võ Thị Xuân",
     "NgaySinh": "2006-04-25",
     "GioiTinh": "Nữ",
@@ -64,5 +141,490 @@
       "MaLop": "L002",
       "TenLop": "10A2"   
     }
+},
+{
+  "MaHS": "HS014",
+  "HoTen": "Nguyễn Thái Hoàng",
+  "NgaySinh": "2006-02-10",
+  "GioiTinh": "Nam",
+  "DiaChi": "Hồ Chí Minh",
+  "LopHoc": {
+    "MaLop": "L002",
+    "TenLop": "10A2"
+  }
+},
+{
+  "MaHS": "HS015",
+  "HoTen": "Lê Minh Khoa",
+  "NgaySinh": "2006-06-15",
+  "GioiTinh": "Nam",
+  "DiaChi": "Hồ Chí Minh",
+  "LopHoc": {
+    "MaLop": "L002",
+    "TenLop": "10A2"
+  }
+},
+{
+  "MaHS": "HS016",
+  "HoTen": "Ngô Thị Phương",
+  "NgaySinh": "2006-07-22",
+  "GioiTinh": "Nữ",
+  "DiaChi": "Hồ Chí Minh",
+  "LopHoc": {
+    "MaLop": "L002",
+    "TenLop": "10A2"
+  }
+},
+{
+  "MaHS": "HS017",
+  "HoTen": "Hoàng Quốc Duy",
+  "NgaySinh": "2006-03-03",
+  "GioiTinh": "Nam",
+  "DiaChi": "Hồ Chí Minh",
+  "LopHoc": {
+    "MaLop": "L002",
+    "TenLop": "10A2"
+  }
+},
+{
+  "MaHS": "HS018",
+  "HoTen": "Trần Thanh Sơn",
+  "NgaySinh": "2006-05-29",
+  "GioiTinh": "Nam",
+  "DiaChi": "Hồ Chí Minh",
+  "LopHoc": {
+    "MaLop": "L002",
+    "TenLop": "10A2"
+  }
+},
+{
+  "MaHS": "HS019",
+  "HoTen": "Đặng Thị Hải Yến",
+  "NgaySinh": "2006-09-13",
+  "GioiTinh": "Nữ",
+  "DiaChi": "Hồ Chí Minh",
+  "LopHoc": {
+    "MaLop": "L002",
+    "TenLop": "10A2"
+  }
+},
+{
+  "MaHS": "HS020",
+  "HoTen": "Nguyễn Thị Minh Anh",
+  "NgaySinh": "2005-01-10",
+  "GioiTinh": "Nữ",
+  "DiaChi": "Hà Nội",
+  "LopHoc": {
+    "MaLop": "L003",
+    "TenLop": "11A1"
+  }
+},
+{
+  "MaHS": "HS021",
+  "HoTen": "Vũ Thị Lan",
+  "NgaySinh": "2005-04-18",
+  "GioiTinh": "Nữ",
+  "DiaChi": "Hà Nội",
+  "LopHoc": {
+    "MaLop": "L003",
+    "TenLop": "11A1"
+  }
+},
+{
+  "MaHS": "HS022",
+  "HoTen": "Lê Hoàng Anh",
+  "NgaySinh": "2005-03-07",
+  "GioiTinh": "Nam",
+  "DiaChi": "Hà Nội",
+  "LopHoc": {
+    "MaLop": "L003",
+    "TenLop": "11A1"
+  }
+},
+{
+  "MaHS": "HS023",
+  "HoTen": "Trần Thanh Bình",
+  "NgaySinh": "2005-07-15",
+  "GioiTinh": "Nam",
+  "DiaChi": "Hà Nội",
+  "LopHoc": {
+    "MaLop": "L003",
+    "TenLop": "11A1"
+  }
+},
+{
+  "MaHS": "HS024",
+  "HoTen": "Nguyễn Thị Ngọc Hân",
+  "NgaySinh": "2005-05-20",
+  "GioiTinh": "Nữ",
+  "DiaChi": "Hà Nội",
+  "LopHoc": {
+    "MaLop": "L003",
+    "TenLop": "11A1"
+  }
+},
+{
+  "MaHS": "HS025",
+  "HoTen": "Lý Minh Quân",
+  "NgaySinh": "2005-11-11",
+  "GioiTinh": "Nam",
+  "DiaChi": "Hà Nội",
+  "LopHoc": {
+    "MaLop": "L003",
+    "TenLop": "11A1"
+  }
+},
+{
+  "MaHS": "HS026",
+  "HoTen": "Nguyễn Thị Bích Liên",
+  "NgaySinh": "2005-06-06",
+  "GioiTinh": "Nữ",
+  "DiaChi": "Hà Nội",
+  "LopHoc": {
+    "MaLop": "L003",
+    "TenLop": "11A1"
+  }
+},
+{
+  "MaHS": "HS027",
+  "HoTen": "Phan Đức Anh",
+  "NgaySinh": "2005-08-22",
+  "GioiTinh": "Nam",
+  "DiaChi": "Hà Nội",
+  "LopHoc": {
+    "MaLop": "L003",
+    "TenLop": "11A1"
+  }
+},
+{
+  "MaHS": "HS028",
+  "HoTen": "Trần Thị Mai",
+  "NgaySinh": "2005-04-23",
+  "GioiTinh": "Nữ",
+  "DiaChi": "Hà Nội",
+  "LopHoc": {
+    "MaLop": "L003",
+    "TenLop": "11A1"
+  }
+},
+{
+  "MaHS": "HS029",
+  "HoTen": "Nguyễn Đức Tuấn",
+  "NgaySinh": "2005-09-01",
+  "GioiTinh": "Nam",
+  "DiaChi": "Hà Nội",
+  "LopHoc": {
+    "MaLop": "L003",
+    "TenLop": "11A1"
+  }
+},
+{
+  "MaHS": "HS030",
+  "HoTen": "Trần Minh Tân",
+  "NgaySinh": "2005-04-02",
+  "GioiTinh": "Nam",
+  "DiaChi": "Hồ Chí Minh",
+  "LopHoc": {
+    "MaLop": "L004",
+    "TenLop": "11A2"
+  }
+},
+{
+  "MaHS": "HS031",
+  "HoTen": "Lê Thanh Nhàn",
+  "NgaySinh": "2005-06-12",
+  "GioiTinh": "Nữ",
+  "DiaChi": "Hồ Chí Minh",
+  "LopHoc": {
+    "MaLop": "L004",
+    "TenLop": "11A2"
+  }
+},
+{
+  "MaHS": "HS032",
+  "HoTen": "Nguyễn Thiện Tâm",
+  "NgaySinh": "2005-07-18",
+  "GioiTinh": "Nữ",
+  "DiaChi": "Hồ Chí Minh",
+  "LopHoc": {
+    "MaLop": "L004",
+    "TenLop": "11A2"
+  }
+},
+{
+  "MaHS": "HS033",
+  "HoTen": "Vũ Bích Lan",
+  "NgaySinh": "2005-03-23",
+  "GioiTinh": "Nữ",
+  "DiaChi": "Hồ Chí Minh",
+  "LopHoc": {
+    "MaLop": "L004",
+    "TenLop": "11A2"
+  }
+},
+{
+  "MaHS": "HS034",
+  "HoTen": "Trần Duy Khoa",
+  "NgaySinh": "2005-05-06",
+  "GioiTinh": "Nam",
+  "DiaChi": "Hồ Chí Minh",
+  "LopHoc": {
+    "MaLop": "L004",
+    "TenLop": "11A2"
+  }
+},
+{
+  "MaHS": "HS035",
+  "HoTen": "Đỗ Quỳnh Mai",
+  "NgaySinh": "2005-08-21",
+  "GioiTinh": "Nữ",
+  "DiaChi": "Hồ Chí Minh",
+  "LopHoc": {
+    "MaLop": "L004",
+    "TenLop": "11A2"
+  }
+},
+{
+  "MaHS": "HS036",
+  "HoTen": "Nguyễn Thị Quỳnh Anh",
+  "NgaySinh": "2005-09-08",
+  "GioiTinh": "Nữ",
+  "DiaChi": "Hồ Chí Minh",
+  "LopHoc": {
+    "MaLop": "L004",
+    "TenLop": "11A2"
+  }
+},
+{
+  "MaHS": "HS037",
+  "HoTen": "Lê Trọng Vỹ",
+  "NgaySinh": "2005-11-14",
+  "GioiTinh": "Nam",
+  "DiaChi": "Hồ Chí Minh",
+  "LopHoc": {
+    "MaLop": "L004",
+    "TenLop": "11A2"
+  }
+},
+{
+  "MaHS": "HS038",
+  "HoTen": "Trần Lê Hoàng",
+  "NgaySinh": "2005-02-20",
+  "GioiTinh": "Nam",
+  "DiaChi": "Hồ Chí Minh",
+  "LopHoc": {
+    "MaLop": "L004",
+    "TenLop": "11A2"
+  }
+},
+{
+  "MaHS": "HS039",
+  "HoTen": "Nguyễn Quốc Duy",
+  "NgaySinh": "2004-09-21",
+  "GioiTinh": "Nam",
+  "DiaChi": "Hà Nội",
+  "LopHoc": {
+    "MaLop": "L005",
+    "TenLop": "12A1"
+  }
+},
+{
+  "MaHS": "HS040",
+  "HoTen": "Vũ Minh Tuyên",
+  "NgaySinh": "2005-11-18",
+  "GioiTinh": "Nam",
+  "DiaChi": "Hà Nội",
+  "LopHoc": {
+    "MaLop": "L005",
+    "TenLop": "12A1"
+  }
+},
+{
+  "MaHS": "HS041",
+  "HoTen": "Lê Hoàng Giang",
+  "NgaySinh": "2005-03-14",
+  "GioiTinh": "Nam",
+  "DiaChi": "Hà Nội",
+  "LopHoc": {
+    "MaLop": "L005",
+    "TenLop": "12A1"
+  }
+},
+{
+  "MaHS": "HS042",
+  "HoTen": "Nguyễn Thanh Hương",
+  "NgaySinh": "2005-07-07",
+  "GioiTinh": "Nữ",
+  "DiaChi": "Hà Nội",
+  "LopHoc": {
+    "MaLop": "L005",
+    "TenLop": "12A1"
+  }
+},
+{
+  "MaHS": "HS043",
+  "HoTen": "Trần Thanh Nhân",
+  "NgaySinh": "2005-02-25",
+  "GioiTinh": "Nam",
+  "DiaChi": "Hà Nội",
+  "LopHoc": {
+    "MaLop": "L005",
+    "TenLop": "12A1"
+  }
+},
+{
+  "MaHS": "HS044",
+  "HoTen": "Lê Đức Minh",
+  "NgaySinh": "2005-08-30",
+  "GioiTinh": "Nam",
+  "DiaChi": "Hà Nội",
+  "LopHoc": {
+    "MaLop": "L005",
+    "TenLop": "12A1"
+  }
+},
+{
+  "MaHS": "HS045",
+  "HoTen": "Nguyễn Thị Lan",
+  "NgaySinh": "2005-05-10",
+  "GioiTinh": "Nữ",
+  "DiaChi": "Hà Nội",
+  "LopHoc": {
+    "MaLop": "L005",
+    "TenLop": "12A1"
+  }
+},
+{
+  "MaHS": "HS046",
+  "HoTen": "Trương Minh Tâm",
+  "NgaySinh": "2005-01-22",
+  "GioiTinh": "Nam",
+  "DiaChi": "Hà Nội",
+  "LopHoc": {
+    "MaLop": "L005",
+    "TenLop": "12A1"
+  }
+},
+{
+  "MaHS": "HS047",
+  "HoTen": "Phạm Thuỳ Dương",
+  "NgaySinh": "2005-03-30",
+  "GioiTinh": "Nữ",
+  "DiaChi": "Hà Nội",
+  "LopHoc": {
+    "MaLop": "L005",
+    "TenLop": "12A1"
+  }
+},
+{
+  "MaHS": "HS048",
+  "HoTen": "Ngô Minh Đạt",
+  "NgaySinh": "2005-07-18",
+  "GioiTinh": "Nam",
+  "DiaChi": "Hà Nội",
+  "LopHoc": {
+    "MaLop": "L005",
+    "TenLop": "12A1"
+  }
+},
+{
+  "MaHS": "HS049",
+  "HoTen": "Nguyễn Thanh Bình",
+  "NgaySinh": "2004-10-14",
+  "GioiTinh": "Nam",
+  "DiaChi": "Hồ Chí Minh",
+  "LopHoc": {
+    "MaLop": "L006",
+    "TenLop": "12A2"
+  }
+},
+{
+  "MaHS": "HS050",
+  "HoTen": "Trần Thị Thảo",
+  "NgaySinh": "2005-11-05",
+  "GioiTinh": "Nữ",
+  "DiaChi": "Hồ Chí Minh",
+  "LopHoc": {
+    "MaLop": "L006",
+    "TenLop": "12A2"
+  }
+},
+{
+  "MaHS": "HS051",
+  "HoTen": "Lê Thanh Tú",
+  "NgaySinh": "2005-06-20",
+  "GioiTinh": "Nữ",
+  "DiaChi": "Hồ Chí Minh",
+  "LopHoc": {
+    "MaLop": "L006",
+    "TenLop": "12A2"
+  }
+},
+{
+  "MaHS": "HS052",
+  "HoTen": "Vũ Minh Khôi",
+  "NgaySinh": "2005-02-18",
+  "GioiTinh": "Nam",
+  "DiaChi": "Hồ Chí Minh",
+  "LopHoc": {
+    "MaLop": "L006",
+    "TenLop": "12A2"
+  }
+},
+{
+  "MaHS": "HS053",
+  "HoTen": "Hoàng Thị Kim",
+  "NgaySinh": "2005-08-12",
+  "GioiTinh": "Nữ",
+  "DiaChi": "Hồ Chí Minh",
+  "LopHoc": {
+    "MaLop": "L006",
+    "TenLop": "12A2"
+  }
+},
+{
+  "MaHS": "HS054",
+  "HoTen": "Nguyễn Thị Bích",
+  "NgaySinh": "2005-04-17",
+  "GioiTinh": "Nữ",
+  "DiaChi": "Hồ Chí Minh",
+  "LopHoc": {
+    "MaLop": "L006",
+    "TenLop": "12A2"
+  }
+},
+{
+  "MaHS": "HS055",
+  "HoTen": "Trương Hoàng Sơn",
+  "NgaySinh": "2005-01-30",
+  "GioiTinh": "Nam",
+  "DiaChi": "Hồ Chí Minh",
+  "LopHoc": {
+    "MaLop": "L006",
+    "TenLop": "12A2"
+  }
+},
+{
+  "MaHS": "HS056",
+  "HoTen": "Phạm Thanh Bình",
+  "NgaySinh": "2005-03-10",
+  "GioiTinh": "Nam",
+  "DiaChi": "Hồ Chí Minh",
+  "LopHoc": {
+    "MaLop": "L006",
+    "TenLop": "12A2"
+  }
+},
+{
+  "MaHS": "HS057",
+  "HoTen": "Ngô Thị Kim Chi",
+  "NgaySinh": "2005-07-22",
+  "GioiTinh": "Nữ",
+  "DiaChi": "Hồ Chí Minh",
+  "LopHoc": {
+    "MaLop": "L006",
+    "TenLop": "12A2"
+  }
 }
+
 ]

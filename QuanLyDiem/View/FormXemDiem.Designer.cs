@@ -21,121 +21,128 @@
         }
         private void InitializeComponent()
         {
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.lblLopHoc = new System.Windows.Forms.Label();
-            this.cboLopHoc = new System.Windows.Forms.ComboBox();
-            this.lblMonHoc = new System.Windows.Forms.Label();
-            this.cboMonHoc = new System.Windows.Forms.ComboBox();
-            this.dgvDanhSachHocSinh = new System.Windows.Forms.DataGridView();
-            this.btnXuatFile = new System.Windows.Forms.Button();
-            this.lblThongKe = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachHocSinh)).BeginInit();
-            this.SuspendLayout();
+            lblTitle = new Label();
+            lblLopHoc = new Label();
+            cboLopHoc = new ComboBox();
+            lblMonHoc = new Label();
+            cboMonHoc = new ComboBox();
+            dgvDanhSachHocSinh = new DataGridView();
+            btnXuatFile = new Button();
+            lblThongKe = new Label();
+            ((System.ComponentModel.ISupportInitialize)dgvDanhSachHocSinh).BeginInit();
+            SuspendLayout();
             // 
             // lblTitle
             // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(12, 9);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(314, 24);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "BẢNG ĐIỂM HỌC SINH THEO LỚP";
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitle.Location = new Point(16, 13);
+            lblTitle.Margin = new Padding(4, 0, 4, 0);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(338, 24);
+            lblTitle.TabIndex = 0;
+            lblTitle.Text = "BẢNG ĐIỂM HỌC SINH THEO LỚP";
+            lblTitle.Click += lblTitle_Click;
             // 
             // lblLopHoc
             // 
-            this.lblLopHoc.AutoSize = true;
-            this.lblLopHoc.Location = new System.Drawing.Point(13, 53);
-            this.lblLopHoc.Name = "lblLopHoc";
-            this.lblLopHoc.Size = new System.Drawing.Size(53, 13);
-            this.lblLopHoc.TabIndex = 1;
-            this.lblLopHoc.Text = "Lớp học:";
+            lblLopHoc.AutoSize = true;
+            lblLopHoc.Location = new Point(17, 77);
+            lblLopHoc.Margin = new Padding(4, 0, 4, 0);
+            lblLopHoc.Name = "lblLopHoc";
+            lblLopHoc.Size = new Size(61, 19);
+            lblLopHoc.TabIndex = 1;
+            lblLopHoc.Text = "Lớp học:";
             // 
             // cboLopHoc
             // 
-            this.cboLopHoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboLopHoc.FormattingEnabled = true;
-            this.cboLopHoc.Location = new System.Drawing.Point(72, 50);
-            this.cboLopHoc.Name = "cboLopHoc";
-            this.cboLopHoc.Size = new System.Drawing.Size(200, 21);
-            this.cboLopHoc.TabIndex = 2;
+            cboLopHoc.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboLopHoc.FormattingEnabled = true;
+            cboLopHoc.Location = new Point(96, 73);
+            cboLopHoc.Margin = new Padding(4, 4, 4, 4);
+            cboLopHoc.Name = "cboLopHoc";
+            cboLopHoc.Size = new Size(265, 27);
+            cboLopHoc.TabIndex = 2;
             // 
             // lblMonHoc
             // 
-            this.lblMonHoc.AutoSize = true;
-            this.lblMonHoc.Location = new System.Drawing.Point(294, 53);
-            this.lblMonHoc.Name = "lblMonHoc";
-            this.lblMonHoc.Size = new System.Drawing.Size(55, 13);
-            this.lblMonHoc.TabIndex = 3;
-            this.lblMonHoc.Text = "Môn học:";
+            lblMonHoc.AutoSize = true;
+            lblMonHoc.Location = new Point(392, 77);
+            lblMonHoc.Margin = new Padding(4, 0, 4, 0);
+            lblMonHoc.Name = "lblMonHoc";
+            lblMonHoc.Size = new Size(67, 19);
+            lblMonHoc.TabIndex = 3;
+            lblMonHoc.Text = "Môn học:";
             // 
             // cboMonHoc
             // 
-            this.cboMonHoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboMonHoc.FormattingEnabled = true;
-            this.cboMonHoc.Location = new System.Drawing.Point(355, 50);
-            this.cboMonHoc.Name = "cboMonHoc";
-            this.cboMonHoc.Size = new System.Drawing.Size(200, 21);
-            this.cboMonHoc.TabIndex = 4;
+            cboMonHoc.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboMonHoc.FormattingEnabled = true;
+            cboMonHoc.Location = new Point(473, 73);
+            cboMonHoc.Margin = new Padding(4, 4, 4, 4);
+            cboMonHoc.Name = "cboMonHoc";
+            cboMonHoc.Size = new Size(265, 27);
+            cboMonHoc.TabIndex = 4;
             // 
             // dgvDanhSachHocSinh
             // 
-            this.dgvDanhSachHocSinh.AllowUserToAddRows = false;
-            this.dgvDanhSachHocSinh.AllowUserToDeleteRows = false;
-            this.dgvDanhSachHocSinh.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                | System.Windows.Forms.AnchorStyles.Left)
-                | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvDanhSachHocSinh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvDanhSachHocSinh.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dgvDanhSachHocSinh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDanhSachHocSinh.Location = new System.Drawing.Point(16, 90);
-            this.dgvDanhSachHocSinh.Name = "dgvDanhSachHocSinh";
-            this.dgvDanhSachHocSinh.ReadOnly = true;
-            this.dgvDanhSachHocSinh.Size = new System.Drawing.Size(756, 311);
-            this.dgvDanhSachHocSinh.TabIndex = 5;
+            dgvDanhSachHocSinh.AllowUserToAddRows = false;
+            dgvDanhSachHocSinh.AllowUserToDeleteRows = false;
+            dgvDanhSachHocSinh.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvDanhSachHocSinh.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvDanhSachHocSinh.BackgroundColor = SystemColors.Control;
+            dgvDanhSachHocSinh.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvDanhSachHocSinh.Location = new Point(21, 132);
+            dgvDanhSachHocSinh.Margin = new Padding(4, 4, 4, 4);
+            dgvDanhSachHocSinh.Name = "dgvDanhSachHocSinh";
+            dgvDanhSachHocSinh.ReadOnly = true;
+            dgvDanhSachHocSinh.Size = new Size(1008, 455);
+            dgvDanhSachHocSinh.TabIndex = 5;
             // 
             // btnXuatFile
             // 
-            this.btnXuatFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnXuatFile.Location = new System.Drawing.Point(678, 48);
-            this.btnXuatFile.Name = "btnXuatFile";
-            this.btnXuatFile.Size = new System.Drawing.Size(94, 23);
-            this.btnXuatFile.TabIndex = 6;
-            this.btnXuatFile.Text = "Xuất file Excel";
-            this.btnXuatFile.UseVisualStyleBackColor = true;
+            btnXuatFile.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnXuatFile.Location = new Point(904, 70);
+            btnXuatFile.Margin = new Padding(4, 4, 4, 4);
+            btnXuatFile.Name = "btnXuatFile";
+            btnXuatFile.Size = new Size(125, 34);
+            btnXuatFile.TabIndex = 6;
+            btnXuatFile.Text = "Xuất file Excel";
+            btnXuatFile.UseVisualStyleBackColor = true;
             // 
             // lblThongKe
             // 
-            this.lblThongKe.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblThongKe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblThongKe.Location = new System.Drawing.Point(16, 412);
-            this.lblThongKe.Name = "lblThongKe";
-            this.lblThongKe.Size = new System.Drawing.Size(756, 29);
-            this.lblThongKe.TabIndex = 7;
-            this.lblThongKe.Text = "Thống kê: ";
-            this.lblThongKe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            lblThongKe.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            lblThongKe.BorderStyle = BorderStyle.FixedSingle;
+            lblThongKe.Location = new Point(21, 602);
+            lblThongKe.Margin = new Padding(4, 0, 4, 0);
+            lblThongKe.Name = "lblThongKe";
+            lblThongKe.Size = new Size(1007, 41);
+            lblThongKe.TabIndex = 7;
+            lblThongKe.Text = "Thống kê: ";
+            lblThongKe.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // FormXemDiem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 450);
-            this.Controls.Add(this.lblThongKe);
-            this.Controls.Add(this.btnXuatFile);
-            this.Controls.Add(this.dgvDanhSachHocSinh);
-            this.Controls.Add(this.cboMonHoc);
-            this.Controls.Add(this.lblMonHoc);
-            this.Controls.Add(this.cboLopHoc);
-            this.Controls.Add(this.lblLopHoc);
-            this.Controls.Add(this.lblTitle);
-            this.MinimumSize = new System.Drawing.Size(600, 400);
-            this.Name = "FormXemDiem";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Xem Điểm Học Sinh";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachHocSinh)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(8F, 19F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1045, 658);
+            Controls.Add(lblThongKe);
+            Controls.Add(btnXuatFile);
+            Controls.Add(dgvDanhSachHocSinh);
+            Controls.Add(cboMonHoc);
+            Controls.Add(lblMonHoc);
+            Controls.Add(cboLopHoc);
+            Controls.Add(lblLopHoc);
+            Controls.Add(lblTitle);
+            Margin = new Padding(4, 4, 4, 4);
+            MinimumSize = new Size(795, 567);
+            Name = "FormXemDiem";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Xem Điểm Học Sinh";
+            ((System.ComponentModel.ISupportInitialize)dgvDanhSachHocSinh).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         private System.Windows.Forms.Label lblTitle;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QuanLyDiem.Model
 {
-    public class LopHoc
+    public class LopHoc 
     {
         public string MaLop { get; set; }
         public string TenLop { get; set; }

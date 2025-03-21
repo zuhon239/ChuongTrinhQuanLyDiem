@@ -1,0 +1,17 @@
+{
+  "TenLop": "10A1",
+  "MonHoc": "V\u1EADt L\u00FD",
+  "GiaoVien": "Tr\u1EA7n Th\u1ECB L\u00FD",
+  "NgayXuat": "21/03/2025 14:30:18",
+  "DanhSachDiem": [
+    {
+      "MaHS": "HS001",
+      "HoTen": "Nguy\u1EC5n Th\u1ECB Xu\u00E2n",
+      "DiemMieng": 2,
+      "Diem15Phut": 3,
+      "Diem1Tiet": 4,
+      "DiemHK": 5,
+      "DiemTB": 4
+    }
+  ]
+}

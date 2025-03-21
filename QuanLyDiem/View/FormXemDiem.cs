@@ -145,7 +145,7 @@ namespace QuanLyDiem.View
         private void LoadDanhSachLopHoc()
         {
             cboLopHoc.Items.Clear();
-            List <LopHoc> danhSachLopHoc = quanLyLopHoc.LayDanhSachLopHoc();
+            List<LopHoc> danhSachLopHoc = quanLyLopHoc.LayDanhSachLopHoc();
             foreach (var lopHoc in danhSachLopHoc)
             {
                 cboLopHoc.Items.Add(new ComboBoxItem { Value = lopHoc.MaLop, Text = lopHoc.TenLop });
@@ -162,7 +162,7 @@ namespace QuanLyDiem.View
             cboMonHoc.Items.Clear();
             cboMonHoc.Items.Add(new ComboBoxItem { Value = "ALL", Text = "Tất cả các môn" });
 
-            List<MonHoc> danhSachMonHoc = quanLyMonHoc.LayDanhSachMonHoc(); 
+            List<MonHoc> danhSachMonHoc = quanLyMonHoc.LayDanhSachMonHoc();
             foreach (var monHoc in danhSachMonHoc)
             {
                 cboMonHoc.Items.Add(new ComboBoxItem { Value = monHoc.MaMH, Text = monHoc.TenMH });
@@ -192,9 +192,16 @@ namespace QuanLyDiem.View
             string maLop = ((ComboBoxItem)cboLopHoc.SelectedItem).Value;
             string maMH = cboMonHoc.SelectedItem != null ? ((ComboBoxItem)cboMonHoc.SelectedItem).Value : "ALL";
 
-            List <HocSinh> danhSachHocSinh = hocSinhController.LayDanhSachHocSinh()
-                .Where(hs => hs.LopHoc != null && hs.LopHoc.MaLop == maLop)
-                .ToList();
+            List<HocSinh> danhSachHocSinh = new List<HocSinh>();
+            List<HocSinh> tatCaHocSinh = hocSinhController.LayDanhSachHocSinh();
+            for (int i = 0; i < tatCaHocSinh.Count; i++)
+            {
+                HocSinh hs = tatCaHocSinh[i];
+                if (hs.LopHoc != null && hs.LopHoc.MaLop == maLop)
+                {
+                    danhSachHocSinh.Add(hs);
+                }
+            }
 
             // Tạo DataTable để hiển thị lên DataGridView
             DataTable dt = new DataTable();
@@ -205,7 +212,7 @@ namespace QuanLyDiem.View
             // Thêm cột cho từng môn học nếu chọn "Tất cả các môn"
             if (maMH == "ALL")
             {
-                List <MonHoc> danhSachMonHoc = quanLyMonHoc.LayDanhSachMonHoc();
+                List<MonHoc> danhSachMonHoc = quanLyMonHoc.LayDanhSachMonHoc();
                 foreach (var monHoc in danhSachMonHoc)
                 {
                     dt.Columns.Add(monHoc.MaMH, typeof(double));
@@ -257,7 +264,7 @@ namespace QuanLyDiem.View
                     }
 
                     // Tính điểm trung bình chung
-                    double diemTBChung = quanLyDiem.TinhDiemTBHocSinh(hocSinh.MaHS); 
+                    double diemTBChung = quanLyDiem.TinhDiemTBHocSinh(hocSinh.MaHS);
                     if (soMonCoTheDiemDuoc > 0)
                     {
                         diemTBChung = Math.Round(diemTBChung, 1);
@@ -528,6 +535,11 @@ namespace QuanLyDiem.View
             {
                 MessageBox.Show($"Lỗi khi xuất file: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void lblTitle_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

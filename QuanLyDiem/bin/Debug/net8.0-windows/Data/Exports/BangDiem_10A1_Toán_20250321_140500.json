@@ -1,0 +1,35 @@
+{
+  "TenLop": "10A1",
+  "MonHoc": "To\u00E1n",
+  "GiaoVien": "Nguy\u1EC5n V\u0103n T\u00F9ng",
+  "NgayXuat": "21/03/2025 14:05:00",
+  "DanhSachDiem": [
+    {
+      "MaHS": "HS001",
+      "HoTen": "Nguy\u1EC5n Th\u1ECB Xu\u00E2n",
+      "DiemMieng": 8.5,
+      "Diem15Phut": 6,
+      "Diem1Tiet": 8,
+      "DiemHK": 8.5,
+      "DiemTB": 8
+    },
+    {
+      "MaHS": "HS002",
+      "HoTen": "Tr\u1EA7n V\u0103n L\u00E2m",
+      "DiemMieng": 7.5,
+      "Diem15Phut": 8,
+      "Diem1Tiet": 7,
+      "DiemHK": 7.5,
+      "DiemTB": 7.4
+    },
+    {
+      "MaHS": "HS003",
+      "HoTen": "L\u00EA Th\u1ECB Kim Chi",
+      "DiemMieng": 10,
+      "Diem15Phut": 7,
+      "Diem1Tiet": 7,
+      "DiemHK": 5,
+      "DiemTB": 6.6
+    }
+  ]
+}

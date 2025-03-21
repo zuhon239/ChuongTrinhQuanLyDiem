@@ -144,6 +144,7 @@ namespace QuanLyDiem.View
             cboLopHoc.SelectedIndexChanged += CboLopHoc_SelectedIndexChanged;
             btnLuu.Click += BtnLuu_Click;
             btnXuatFile.Click += BtnXuatFile_Click;
+            btnXoaDiem.Click += BtnXoaDiem_Click;
         }
 
         private void LoadDanhSachGiaoVien()
@@ -200,36 +201,60 @@ namespace QuanLyDiem.View
         {
             if (giaoVienHienTai == null || giaoVienHienTai.MonHoc == null) return;
 
-            List <HocSinh> danhSachHocSinh = hocSinhController.LayDanhSachHocSinh()
-                .Where(hs => hs.LopHoc != null && hs.LopHoc.MaLop == maLop)
-                .ToList();
+            List<HocSinh> danhSachHocSinh = new List<HocSinh>();
+            List<HocSinh> tatCaHocSinh = hocSinhController.LayDanhSachHocSinh();
+            for (int i = 0; i < tatCaHocSinh.Count; i++)
+            {
+                HocSinh hs = tatCaHocSinh[i];
+                if (hs.LopHoc != null && hs.LopHoc.MaLop == maLop)
+                {
+                    danhSachHocSinh.Add(hs);
+                }
+            }
 
             // Tạo DataTable để hiển thị lên DataGridView
             DataTable dt = new DataTable();
             dt.Columns.Add("MaHS", typeof(string));
             dt.Columns.Add("HoTen", typeof(string));
-            dt.Columns.Add("DiemMieng", typeof(double));
-            dt.Columns.Add("Diem15Phut", typeof(double));
-            dt.Columns.Add("Diem1Tiet", typeof(double));
-            dt.Columns.Add("DiemHK", typeof(double));
-            dt.Columns.Add("DiemTB", typeof(double));
+            dt.Columns.Add("DiemMieng", typeof(object));   // Thay đổi kiểu dữ liệu từ double sang object
+            dt.Columns.Add("Diem15Phut", typeof(object));  // để có thể chứa DBNull.Value
+            dt.Columns.Add("Diem1Tiet", typeof(object));
+            dt.Columns.Add("DiemHK", typeof(object));
+            dt.Columns.Add("DiemTB", typeof(object));
 
             foreach (var hocSinh in danhSachHocSinh)
             {
                 DiemSo diemSo = quanLyDiem.TimDiemSo(hocSinh.MaHS, giaoVienHienTai.MonHoc.MaMH);
 
-                double diemMieng = 0, diem15Phut = 0, diem1Tiet = 0, diemHK = 0, diemTB = 0;
-
                 if (diemSo != null)
                 {
-                    diemMieng = diemSo.DiemMieng;
-                    diem15Phut = diemSo.Diem15Phut;
-                    diem1Tiet = diemSo.Diem1Tiet;
-                    diemHK = diemSo.DiemHK;
-                    diemTB = diemSo.TinhDiemTB();
-                }
+                    // Nếu có điểm
+                    double diemTB = diemSo.TinhDiemTB();
+                    object diemTBValue = diemTB > 0 ? Math.Round(diemTB, 1) : DBNull.Value;
 
-                dt.Rows.Add(hocSinh.MaHS, hocSinh.HoTen, diemMieng, diem15Phut, diem1Tiet, diemHK, Math.Round(diemTB, 1));
+                    dt.Rows.Add(
+                        hocSinh.MaHS,
+                        hocSinh.HoTen,
+                        diemSo.DiemMieng > 0 ? diemSo.DiemMieng : DBNull.Value,
+                        diemSo.Diem15Phut > 0 ? diemSo.Diem15Phut : DBNull.Value,
+                        diemSo.Diem1Tiet > 0 ? diemSo.Diem1Tiet : DBNull.Value,
+                        diemSo.DiemHK > 0 ? diemSo.DiemHK : DBNull.Value,
+                        diemTBValue
+                    );
+                }
+                else
+                {
+                    // Nếu chưa có điểm
+                    dt.Rows.Add(
+                        hocSinh.MaHS,
+                        hocSinh.HoTen,
+                        DBNull.Value,
+                        DBNull.Value,
+                        DBNull.Value,
+                        DBNull.Value,
+                        DBNull.Value
+                    );
+                }
             }
 
             dgvDanhSachHocSinh.DataSource = dt;
@@ -252,60 +277,75 @@ namespace QuanLyDiem.View
 
         private void BtnLuu_Click(object sender, EventArgs e)
         {
-            if (dgvDanhSachHocSinh.DataSource == null || cboLopHoc.SelectedItem == null || giaoVienHienTai == null || giaoVienHienTai.MonHoc == null)
+            if (dgvDanhSachHocSinh.DataSource == null || cboLopHoc.SelectedItem == null ||
+                giaoVienHienTai == null || giaoVienHienTai.MonHoc == null)
             {
-                MessageBox.Show("Vui lòng chọn giáo viên và lớp học trước khi lưu điểm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng chọn giáo viên và lớp học trước khi lưu điểm!",
+                               "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             try
             {
                 DataTable dt = (DataTable)dgvDanhSachHocSinh.DataSource;
-
                 foreach (DataRow row in dt.Rows)
                 {
                     string maHS = row["MaHS"].ToString();
-                    double diemMieng = Convert.ToDouble(row["DiemMieng"]);
-                    double diem15Phut = Convert.ToDouble(row["Diem15Phut"]);
-                    double diem1Tiet = Convert.ToDouble(row["Diem1Tiet"]);
-                    double diemHK = Convert.ToDouble(row["DiemHK"]);
-
-                    // Kiểm tra điểm hợp lệ (0-10)
-                    if (diemMieng < 0 || diemMieng > 10 ||
-                        diem15Phut < 0 || diem15Phut > 10 ||
-                        diem1Tiet < 0 || diem1Tiet > 10 ||
-                        diemHK < 0 || diemHK > 10)
-                    {
-                        MessageBox.Show($"Điểm của học sinh {row["HoTen"]} không hợp lệ. Điểm phải từ 0-10!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
-
                     HocSinh hocSinh = hocSinhController.TimHocSinhTheoMa(maHS);
+
                     if (hocSinh != null)
                     {
-                        DiemSo diemSo = quanLyDiem.TimDiemSo(maHS, giaoVienHienTai.MonHoc.MaMH);
+                        // Kiểm tra nếu tất cả các điểm đều DBNull (đã xóa điểm)
+                        bool allScoresDeleted = row["DiemMieng"] == DBNull.Value &&
+                                               row["Diem15Phut"] == DBNull.Value &&
+                                               row["Diem1Tiet"] == DBNull.Value &&
+                                               row["DiemHK"] == DBNull.Value;
 
-                        if (diemSo != null)
+                        if (allScoresDeleted)
                         {
-                            // Cập nhật điểm số nếu đã tồn tại
-                            quanLyDiem.CapNhatDiemSo(maHS, giaoVienHienTai.MonHoc.MaMH, diemMieng, diem15Phut, diem1Tiet, diemHK);
+                            // Xóa hoàn toàn bản ghi điểm nếu tất cả điểm đã bị xóa
+                            quanLyDiem.XoaDiemSo(maHS, giaoVienHienTai.MonHoc.MaMH);
                         }
                         else
                         {
-                            // Thêm mới điểm số nếu chưa tồn tại
-                            DiemSo diemSoMoi = new DiemSo(hocSinh, giaoVienHienTai.MonHoc, diemMieng, diem15Phut, diem1Tiet, diemHK);
-                            quanLyDiem.ThemDiemSo(diemSoMoi);
+                            // Kiểm tra và xử lý các ô trống
+                            double diemMieng = row["DiemMieng"] == DBNull.Value ? -1 : Convert.ToDouble(row["DiemMieng"]);
+                            double diem15Phut = row["Diem15Phut"] == DBNull.Value ? -1 : Convert.ToDouble(row["Diem15Phut"]);
+                            double diem1Tiet = row["Diem1Tiet"] == DBNull.Value ? -1 : Convert.ToDouble(row["Diem1Tiet"]);
+                            double diemHK = row["DiemHK"] == DBNull.Value ? -1 : Convert.ToDouble(row["DiemHK"]);
+
+                            // Kiểm tra điểm hợp lệ (nếu có giá trị thì phải từ 0-10)
+                            if ((row["DiemMieng"] != DBNull.Value && (diemMieng < 0 || diemMieng > 10)) ||
+                                (row["Diem15Phut"] != DBNull.Value && (diem15Phut < 0 || diem15Phut > 10)) ||
+                                (row["Diem1Tiet"] != DBNull.Value && (diem1Tiet < 0 || diem1Tiet > 10)) ||
+                                (row["DiemHK"] != DBNull.Value && (diemHK < 0 || diemHK > 10)))
+                            {
+                                MessageBox.Show($"Điểm của học sinh {row["HoTen"]} không hợp lệ. Điểm phải từ 0-10!",
+                                               "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return;
+                            }
+
+                            DiemSo diemSo = quanLyDiem.TimDiemSo(maHS, giaoVienHienTai.MonHoc.MaMH);
+                            if (diemSo != null)
+                            {
+                                // Cập nhật điểm số nếu đã tồn tại
+                                quanLyDiem.CapNhatDiemSo(maHS, giaoVienHienTai.MonHoc.MaMH, diemMieng, diem15Phut, diem1Tiet, diemHK);
+                            }
+                            else
+                            {
+                                // Thêm mới điểm số nếu chưa tồn tại
+                                DiemSo diemSoMoi = new DiemSo(hocSinh, giaoVienHienTai.MonHoc, diemMieng, diem15Phut, diem1Tiet, diemHK);
+                                quanLyDiem.ThemDiemSo(diemSoMoi);
+                            }
                         }
                     }
                 }
 
-                // Lưu dữ liệu vào file
+                // Lưu dữ liệu
                 string filePath = Path.Combine(dataFolder, "DiemSo.json");
                 if (quanLyDiem.LuuDanhSachDiemJson(filePath))
                 {
                     MessageBox.Show("Đã lưu điểm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    // Cập nhật lại điểm trung bình trên grid
                     RefreshDiemTrungBinh();
                 }
                 else
@@ -329,10 +369,73 @@ namespace QuanLyDiem.View
                     DiemSo diemSo = quanLyDiem.TimDiemSo(maHS, giaoVienHienTai.MonHoc.MaMH);
                     if (diemSo != null)
                     {
-                        row["DiemTB"] = Math.Round(diemSo.TinhDiemTB(), 1);
+                        double diemTB = diemSo.TinhDiemTB();
+                        row["DiemTB"] = diemTB > 0 ? Math.Round(diemTB, 1) : DBNull.Value;
                     }
                 }
                 dgvDanhSachHocSinh.Refresh();
+            }
+        }
+        private void BtnXoaDiem_Click(object sender, EventArgs e)
+        {
+            if (dgvDanhSachHocSinh.DataSource == null || cboLopHoc.SelectedItem == null ||
+                giaoVienHienTai == null || giaoVienHienTai.MonHoc == null)
+            {
+                MessageBox.Show("Vui lòng chọn giáo viên và lớp học trước khi xóa điểm!",
+                    "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Kiểm tra xem có hàng nào được chọn không
+            if (dgvDanhSachHocSinh.SelectedRows.Count == 0 && dgvDanhSachHocSinh.SelectedCells.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn học sinh cần xóa điểm!",
+                    "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Lấy mã học sinh từ hàng được chọn
+            string maHS = "";
+            if (dgvDanhSachHocSinh.SelectedRows.Count > 0)
+            {
+                maHS = dgvDanhSachHocSinh.SelectedRows[0].Cells["MaHS"].Value.ToString();
+            }
+            else if (dgvDanhSachHocSinh.SelectedCells.Count > 0)
+            {
+                int rowIndex = dgvDanhSachHocSinh.SelectedCells[0].RowIndex;
+                maHS = dgvDanhSachHocSinh.Rows[rowIndex].Cells["MaHS"].Value.ToString();
+            }
+
+            // Xác nhận từ người dùng
+            DialogResult result = MessageBox.Show($"Bạn có chắc chắn muốn xóa điểm của học sinh này cho môn {giaoVienHienTai.MonHoc.TenMH}?",
+                "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                if (quanLyDiem.XoaDiemSo(maHS, giaoVienHienTai.MonHoc.MaMH))
+                {
+                    // Lưu dữ liệu vào file
+                    string filePath = Path.Combine(dataFolder, "DiemSo.json");
+                    if (quanLyDiem.LuuDanhSachDiemJson(filePath))
+                    {
+                        MessageBox.Show("Đã xóa điểm thành công!",
+                            "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        // Cập nhật lại DataGridView
+                        string maLop = ((ComboBoxItem)cboLopHoc.SelectedItem).Value;
+                        LoadDanhSachHocSinhTheoLop(maLop);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa điểm thành công nhưng lưu file không thành công!",
+                            "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);                        
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy điểm để xóa!",
+                        "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
 
@@ -352,9 +455,16 @@ namespace QuanLyDiem.View
                 if (lopHoc != null && giaoVienHienTai.MonHoc != null)
                 {
                     // Lấy danh sách học sinh có điểm số của môn học hiện tại trong lớp hiện tại
-                    List <HocSinh> danhSachHocSinh = hocSinhController.LayDanhSachHocSinh()
-                        .Where(hs => hs.LopHoc != null && hs.LopHoc.MaLop == maLop)
-                        .ToList();
+                    List<HocSinh> danhSachHocSinh = new List<HocSinh>();
+                    List<HocSinh> tatCaHocSinh = hocSinhController.LayDanhSachHocSinh();
+                    for (int i = 0; i < tatCaHocSinh.Count; i++)
+                    {
+                        HocSinh hs = tatCaHocSinh[i];
+                        if (hs.LopHoc != null && hs.LopHoc.MaLop == maLop)
+                        {
+                            danhSachHocSinh.Add(hs);
+                        }
+                    }
 
                     // Tạo danh sách điểm số để xuất
                     var danhSachDiem = new List<object>();
