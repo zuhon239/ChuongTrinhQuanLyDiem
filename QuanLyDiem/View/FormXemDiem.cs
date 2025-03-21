@@ -257,10 +257,10 @@ namespace QuanLyDiem.View
                     }
 
                     // Tính điểm trung bình chung
-                    double diemTBChung = 0;
+                    double diemTBChung = quanLyDiem.TinhDiemTBHocSinh(hocSinh.MaHS); 
                     if (soMonCoTheDiemDuoc > 0)
                     {
-                        diemTBChung = Math.Round(tongDiem / soMonCoTheDiemDuoc, 1);
+                        diemTBChung = Math.Round(diemTBChung, 1);
                         row["DiemTBChung"] = diemTBChung;
                         row["XepLoai"] = XepLoaiHocSinh(diemTBChung);
                     }

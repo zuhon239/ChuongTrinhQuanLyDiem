@@ -329,7 +329,7 @@ namespace QuanLyDiem.View
                     DiemSo diemSo = quanLyDiem.TimDiemSo(maHS, giaoVienHienTai.MonHoc.MaMH);
                     if (diemSo != null)
                     {
-                        row["DiemTB"] = Math.Round(diemSo.TinhDiemTB(), 2);
+                        row["DiemTB"] = Math.Round(diemSo.TinhDiemTB(), 1);
                     }
                 }
                 dgvDanhSachHocSinh.Refresh();

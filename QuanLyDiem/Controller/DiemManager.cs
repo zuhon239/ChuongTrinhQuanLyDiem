@@ -64,32 +64,6 @@ namespace QuanLyDiem.Controller
             return null;
         }
 
-        public List<DiemSo> LayDiemSoTheoHocSinh(string maHS)
-        {
-            List<DiemSo> ketQua = new List<DiemSo>();
-            for (int i = 0; i < danhSachDiemSo.Count; i++)
-            {
-                if (danhSachDiemSo[i].HocSinh.MaHS == maHS)
-                {
-                    ketQua.Add(danhSachDiemSo[i]);
-                }
-            }
-            return ketQua;
-        }
-
-        public List<DiemSo> LayDiemSoTheoMonHoc(string maMH)
-        {
-            List<DiemSo> ketQua = new List<DiemSo>();
-            for (int i = 0; i < danhSachDiemSo.Count; i++)
-            {
-                if (danhSachDiemSo[i].MonHoc.MaMH == maMH)
-                {
-                    ketQua.Add(danhSachDiemSo[i]);
-                }
-            }
-            return ketQua;
-        }
-
         public double TinhDiemTBHocSinh(string maHS)
         {
             double tongDiem = 0;
@@ -103,11 +77,6 @@ namespace QuanLyDiem.Controller
                 }
             }
             return soMon > 0 ? tongDiem / soMon : 0;
-        }
-
-        public List<DiemSo> LayDanhSachDiemSo()
-        {
-            return danhSachDiemSo;
         }
 
         public bool LuuDanhSachDiemJson(string filePath)

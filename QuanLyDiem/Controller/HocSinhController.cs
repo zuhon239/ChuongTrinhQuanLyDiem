@@ -23,8 +23,6 @@ namespace QuanLyDiem.Controller
             danhSachHocSinh.Add(hocSinh);
         }
 
-        public void Sua(HocSinh hocSinh) { /* Cập nhật thông tin */ }
-        public void Xoa(string ma) { /* Xóa học sinh */ }
         public HocSinh TimHocSinhTheoMa(string maHS)
         {
             for (int i = 0; i < danhSachHocSinh.Count; i++)
