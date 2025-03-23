@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace QuanLyDiem.Model
 {
-    public class HocSinh : Nguoi
+    public class HocSinh : Nguoi 
     {
         public string MaHS { get; set; }
         public LopHoc LopHoc { get; set; }

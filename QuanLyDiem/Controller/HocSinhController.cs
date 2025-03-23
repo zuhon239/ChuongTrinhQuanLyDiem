@@ -44,7 +44,12 @@ namespace QuanLyDiem.Controller
         {
             try
             {
-                string jsonString = JsonSerializer.Serialize(danhSachHocSinh, new JsonSerializerOptions { WriteIndented = true });
+                var options = new JsonSerializerOptions
+                {
+                    WriteIndented = true
+                };
+
+                string jsonString = JsonSerializer.Serialize(danhSachHocSinh, options);
                 File.WriteAllText(filePath, jsonString);
                 return true;
             }
@@ -53,7 +58,6 @@ namespace QuanLyDiem.Controller
                 return false;
             }
         }
-
         public bool DocDanhSachHocSinhJson(string filePath)
         {
             try
@@ -61,7 +65,12 @@ namespace QuanLyDiem.Controller
                 if (File.Exists(filePath))
                 {
                     string jsonString = File.ReadAllText(filePath);
-                    danhSachHocSinh = JsonSerializer.Deserialize<List<HocSinh>>(jsonString);
+                    var options = new JsonSerializerOptions
+                    {
+                        PropertyNameCaseInsensitive = true
+                    };
+
+                    danhSachHocSinh = JsonSerializer.Deserialize<List<HocSinh>>(jsonString, options);
                     return true;
                 }
                 return false;

@@ -13,6 +13,8 @@ using System.Windows.Forms;
 
 namespace QuanLyDiem.View
 {
+    public delegate void ThongBaoCapNhatHandler(string tieuDe, string noiDung, MessageBoxIcon icon);
+
     public partial class FormQuanLyDiem : Form
     {
         private DiemManager quanLyDiem;
@@ -23,12 +25,23 @@ namespace QuanLyDiem.View
         private GiaoVien giaoVienHienTai;
         private string dataFolder = "Data";
 
+        public event ThongBaoCapNhatHandler ThongBaoCapNhat;
+
         public FormQuanLyDiem()
         {
             InitializeComponent();
             KhoiTaoQuanLy();
             LoadDuLieuTuFile();
             SetupControls();
+            ThongBaoCapNhat += HienThiThongBao;
+        }
+        private void HienThiThongBao(string tieuDe, string noiDung, MessageBoxIcon icon)
+        {
+            MessageBox.Show(noiDung, tieuDe, MessageBoxButtons.OK, icon);
+        }
+        private void PhatSinhThongBao(string tieuDe, string noiDung, MessageBoxIcon icon)
+        {
+            ThongBaoCapNhat?.Invoke(tieuDe, noiDung, icon);
         }
 
         private void KhoiTaoQuanLy()
@@ -42,20 +55,16 @@ namespace QuanLyDiem.View
 
         private void LoadDuLieuTuFile()
         {
-            // Tạo thư mục Data nếu chưa tồn tại
             if (!Directory.Exists(dataFolder))
             {
                 Directory.CreateDirectory(dataFolder);
             }
-
-            // Đọc dữ liệu từ các file JSON
             DocDuLieuGiaoVien();
             DocDuLieuHocSinh();
             DocDuLieuLopHoc();
             DocDuLieuMonHoc();
             DocDuLieuDiemSo();
         }
-
         private void DocDuLieuGiaoVien()
         {
             string filePath = Path.Combine(dataFolder, "GiaoVien.json");
@@ -74,16 +83,21 @@ namespace QuanLyDiem.View
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Lỗi khi đọc file giáo viên: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                PhatSinhThongBao("Lỗi", $"Lỗi khi đọc file giáo viên: {ex.Message}", MessageBoxIcon.Error);
             }
         }
-
         private void DocDuLieuHocSinh()
         {
             string filePath = Path.Combine(dataFolder, "HocSinh.json");
-            hocSinhController.DocDanhSachHocSinhJson(filePath);
+            try
+            {
+                hocSinhController.DocDanhSachHocSinhJson(filePath);
+            }
+            catch (Exception ex)
+            {
+                PhatSinhThongBao("Lỗi", $"Lỗi khi đọc file học sinh: {ex.Message}", MessageBoxIcon.Error);
+            }
         }
-
         private void DocDuLieuLopHoc()
         {
             string filePath = Path.Combine(dataFolder, "LopHoc.json");
@@ -102,7 +116,7 @@ namespace QuanLyDiem.View
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Lỗi khi đọc file lớp học: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                PhatSinhThongBao("Lỗi", $"Lỗi khi đọc file lớp học: {ex.Message}", MessageBoxIcon.Error);
             }
         }
 
@@ -124,14 +138,21 @@ namespace QuanLyDiem.View
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Lỗi khi đọc file môn học: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                PhatSinhThongBao("Lỗi", $"Lỗi khi đọc file môn học: {ex.Message}", MessageBoxIcon.Error);
             }
         }
 
         private void DocDuLieuDiemSo()
         {
             string filePath = Path.Combine(dataFolder, "DiemSo.json");
-            quanLyDiem.DocDanhSachDiemJson(filePath);
+            try
+            {
+                quanLyDiem.DocDanhSachDiemJson(filePath);
+            }
+            catch (Exception ex)
+            {
+                PhatSinhThongBao("Lỗi", $"Lỗi khi đọc file điểm số: {ex.Message}", MessageBoxIcon.Error);
+            }
         }
 
         private void SetupControls()
@@ -150,7 +171,7 @@ namespace QuanLyDiem.View
         private void LoadDanhSachGiaoVien()
         {
             cboGiaoVien.Items.Clear();
-            List <GiaoVien> danhSachGiaoVien = quanLyGiaoVien.LayDanhSachGiaoVien();
+            List<GiaoVien> danhSachGiaoVien = quanLyGiaoVien.LayDanhSachGiaoVien();
             foreach (var giaoVien in danhSachGiaoVien)
             {
                 cboGiaoVien.Items.Add(new ComboBoxItem { Value = giaoVien.MaGV, Text = $"{giaoVien.HoTen} - {giaoVien.MonHoc?.TenMH ?? "Chưa phân môn"}" });
@@ -174,6 +195,9 @@ namespace QuanLyDiem.View
                     lblMonHoc.Text = "Môn học: Chưa được phân công";
                     cboLopHoc.Items.Clear();
                     dgvDanhSachHocSinh.DataSource = null;
+
+                    // Phát sinh thông báo cảnh báo
+                    PhatSinhThongBao("Cảnh báo", "Giáo viên chưa được phân công môn học", MessageBoxIcon.Warning);
                 }
             }
         }
@@ -181,7 +205,7 @@ namespace QuanLyDiem.View
         private void LoadDanhSachLopDay()
         {
             cboLopHoc.Items.Clear();
-           List <LopHoc> danhSachLopHoc = quanLyLopHoc.LayDanhSachLopHoc();
+            List<LopHoc> danhSachLopHoc = quanLyLopHoc.LayDanhSachLopHoc();
             foreach (var lopHoc in danhSachLopHoc)
             {
                 cboLopHoc.Items.Add(new ComboBoxItem { Value = lopHoc.MaLop, Text = lopHoc.TenLop });
@@ -193,6 +217,7 @@ namespace QuanLyDiem.View
             if (cboLopHoc.SelectedItem != null && giaoVienHienTai != null && giaoVienHienTai.MonHoc != null)
             {
                 string maLop = ((ComboBoxItem)cboLopHoc.SelectedItem).Value;
+                string tenLop = ((ComboBoxItem)cboLopHoc.SelectedItem).Text;
                 LoadDanhSachHocSinhTheoLop(maLop);
             }
         }
@@ -280,14 +305,15 @@ namespace QuanLyDiem.View
             if (dgvDanhSachHocSinh.DataSource == null || cboLopHoc.SelectedItem == null ||
                 giaoVienHienTai == null || giaoVienHienTai.MonHoc == null)
             {
-                MessageBox.Show("Vui lòng chọn giáo viên và lớp học trước khi lưu điểm!",
-                               "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                PhatSinhThongBao("Thông báo", "Vui lòng chọn giáo viên và lớp học trước khi lưu điểm!", MessageBoxIcon.Warning);
                 return;
             }
 
             try
             {
                 DataTable dt = (DataTable)dgvDanhSachHocSinh.DataSource;
+                int soHocSinhCapNhat = 0;
+
                 foreach (DataRow row in dt.Rows)
                 {
                     string maHS = row["MaHS"].ToString();
@@ -320,8 +346,7 @@ namespace QuanLyDiem.View
                                 (row["Diem1Tiet"] != DBNull.Value && (diem1Tiet < 0 || diem1Tiet > 10)) ||
                                 (row["DiemHK"] != DBNull.Value && (diemHK < 0 || diemHK > 10)))
                             {
-                                MessageBox.Show($"Điểm của học sinh {row["HoTen"]} không hợp lệ. Điểm phải từ 0-10!",
-                                               "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                PhatSinhThongBao("Lỗi", $"Điểm của học sinh {row["HoTen"]} không hợp lệ. Điểm phải từ 0-10!", MessageBoxIcon.Error);
                                 return;
                             }
 
@@ -337,6 +362,7 @@ namespace QuanLyDiem.View
                                 DiemSo diemSoMoi = new DiemSo(hocSinh, giaoVienHienTai.MonHoc, diemMieng, diem15Phut, diem1Tiet, diemHK);
                                 quanLyDiem.ThemDiemSo(diemSoMoi);
                             }
+                            soHocSinhCapNhat++;
                         }
                     }
                 }
@@ -345,17 +371,17 @@ namespace QuanLyDiem.View
                 string filePath = Path.Combine(dataFolder, "DiemSo.json");
                 if (quanLyDiem.LuuDanhSachDiemJson(filePath))
                 {
-                    MessageBox.Show("Đã lưu điểm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    PhatSinhThongBao("Thông báo", $"Đã lưu điểm thành công cho {soHocSinhCapNhat} học sinh!", MessageBoxIcon.Information);
                     RefreshDiemTrungBinh();
                 }
                 else
                 {
-                    MessageBox.Show("Lưu điểm không thành công!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    PhatSinhThongBao("Lỗi", "Lưu điểm không thành công!", MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                PhatSinhThongBao("Lỗi", $"Đã xảy ra lỗi: {ex.Message}", MessageBoxIcon.Error);
             }
         }
 
@@ -376,38 +402,40 @@ namespace QuanLyDiem.View
                 dgvDanhSachHocSinh.Refresh();
             }
         }
+
         private void BtnXoaDiem_Click(object sender, EventArgs e)
         {
             if (dgvDanhSachHocSinh.DataSource == null || cboLopHoc.SelectedItem == null ||
                 giaoVienHienTai == null || giaoVienHienTai.MonHoc == null)
             {
-                MessageBox.Show("Vui lòng chọn giáo viên và lớp học trước khi xóa điểm!",
-                    "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                PhatSinhThongBao("Thông báo", "Vui lòng chọn giáo viên và lớp học trước khi xóa điểm!", MessageBoxIcon.Warning);
                 return;
             }
 
             // Kiểm tra xem có hàng nào được chọn không
             if (dgvDanhSachHocSinh.SelectedRows.Count == 0 && dgvDanhSachHocSinh.SelectedCells.Count == 0)
             {
-                MessageBox.Show("Vui lòng chọn học sinh cần xóa điểm!",
-                    "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                PhatSinhThongBao("Thông báo", "Vui lòng chọn học sinh cần xóa điểm!", MessageBoxIcon.Warning);
                 return;
             }
 
             // Lấy mã học sinh từ hàng được chọn
             string maHS = "";
+            string tenHS = "";
             if (dgvDanhSachHocSinh.SelectedRows.Count > 0)
             {
                 maHS = dgvDanhSachHocSinh.SelectedRows[0].Cells["MaHS"].Value.ToString();
+                tenHS = dgvDanhSachHocSinh.SelectedRows[0].Cells["HoTen"].Value.ToString();
             }
             else if (dgvDanhSachHocSinh.SelectedCells.Count > 0)
             {
                 int rowIndex = dgvDanhSachHocSinh.SelectedCells[0].RowIndex;
                 maHS = dgvDanhSachHocSinh.Rows[rowIndex].Cells["MaHS"].Value.ToString();
+                tenHS = dgvDanhSachHocSinh.Rows[rowIndex].Cells["HoTen"].Value.ToString();
             }
 
             // Xác nhận từ người dùng
-            DialogResult result = MessageBox.Show($"Bạn có chắc chắn muốn xóa điểm của học sinh này cho môn {giaoVienHienTai.MonHoc.TenMH}?",
+            DialogResult result = MessageBox.Show($"Bạn có chắc chắn muốn xóa điểm của học sinh {tenHS} cho môn {giaoVienHienTai.MonHoc.TenMH}?",
                 "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
@@ -418,8 +446,7 @@ namespace QuanLyDiem.View
                     string filePath = Path.Combine(dataFolder, "DiemSo.json");
                     if (quanLyDiem.LuuDanhSachDiemJson(filePath))
                     {
-                        MessageBox.Show("Đã xóa điểm thành công!",
-                            "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        PhatSinhThongBao("Thông báo", $"Đã xóa điểm của học sinh {tenHS} thành công!", MessageBoxIcon.Information);
 
                         // Cập nhật lại DataGridView
                         string maLop = ((ComboBoxItem)cboLopHoc.SelectedItem).Value;
@@ -427,14 +454,12 @@ namespace QuanLyDiem.View
                     }
                     else
                     {
-                        MessageBox.Show("Xóa điểm thành công nhưng lưu file không thành công!",
-                            "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);                        
+                        PhatSinhThongBao("Cảnh báo", "Xóa điểm thành công nhưng lưu file không thành công!", MessageBoxIcon.Warning);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Không tìm thấy điểm để xóa!",
-                        "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    PhatSinhThongBao("Thông báo", "Không tìm thấy điểm để xóa!", MessageBoxIcon.Information);
                 }
             }
         }
@@ -443,78 +468,82 @@ namespace QuanLyDiem.View
         {
             if (dgvDanhSachHocSinh.DataSource == null || cboLopHoc.SelectedItem == null || giaoVienHienTai == null)
             {
-                MessageBox.Show("Vui lòng chọn giáo viên và lớp học trước khi xuất file!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                PhatSinhThongBao("Thông báo", "Vui lòng chọn giáo viên và lớp học trước khi xuất file!", MessageBoxIcon.Warning);
                 return;
             }
-
-            try
+            DialogResult result = MessageBox.Show($"Bạn có chắc chắn muốn xuất file điểm môn {giaoVienHienTai.MonHoc.TenMH} của lớp này không ?",
+              "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
             {
-                string maLop = ((ComboBoxItem)cboLopHoc.SelectedItem).Value;
-                LopHoc lopHoc = quanLyLopHoc.TimLopHocTheoMa(maLop);
-
-                if (lopHoc != null && giaoVienHienTai.MonHoc != null)
+                try
                 {
-                    // Lấy danh sách học sinh có điểm số của môn học hiện tại trong lớp hiện tại
-                    List<HocSinh> danhSachHocSinh = new List<HocSinh>();
-                    List<HocSinh> tatCaHocSinh = hocSinhController.LayDanhSachHocSinh();
-                    for (int i = 0; i < tatCaHocSinh.Count; i++)
-                    {
-                        HocSinh hs = tatCaHocSinh[i];
-                        if (hs.LopHoc != null && hs.LopHoc.MaLop == maLop)
-                        {
-                            danhSachHocSinh.Add(hs);
-                        }
-                    }
+                    string maLop = ((ComboBoxItem)cboLopHoc.SelectedItem).Value;
+                    LopHoc lopHoc = quanLyLopHoc.TimLopHocTheoMa(maLop);
 
-                    // Tạo danh sách điểm số để xuất
-                    var danhSachDiem = new List<object>();
-                    foreach (var hocSinh in danhSachHocSinh)
+                    if (lopHoc != null && giaoVienHienTai.MonHoc != null)
                     {
-                        DiemSo diemSo = quanLyDiem.TimDiemSo(hocSinh.MaHS, giaoVienHienTai.MonHoc.MaMH);
-                        if (diemSo != null)
+                        // Lấy danh sách học sinh có điểm số của môn học hiện tại trong lớp hiện tại
+                        List<HocSinh> danhSachHocSinh = new List<HocSinh>();
+                        List<HocSinh> tatCaHocSinh = hocSinhController.LayDanhSachHocSinh();
+                        for (int i = 0; i < tatCaHocSinh.Count; i++)
                         {
-                            danhSachDiem.Add(new
+                            HocSinh hs = tatCaHocSinh[i];
+                            if (hs.LopHoc != null && hs.LopHoc.MaLop == maLop)
                             {
-                                MaHS = hocSinh.MaHS,
-                                HoTen = hocSinh.HoTen,
-                                DiemMieng = diemSo.DiemMieng,
-                                Diem15Phut = diemSo.Diem15Phut,
-                                Diem1Tiet = diemSo.Diem1Tiet,
-                                DiemHK = diemSo.DiemHK,
-                                DiemTB = Math.Round(diemSo.TinhDiemTB(), 1)
-                            });
+                                danhSachHocSinh.Add(hs);
+                            }
                         }
+
+                        // Tạo danh sách điểm số để xuất
+                        var danhSachDiem = new List<object>();
+                        foreach (var hocSinh in danhSachHocSinh)
+                        {
+                            DiemSo diemSo = quanLyDiem.TimDiemSo(hocSinh.MaHS, giaoVienHienTai.MonHoc.MaMH);
+                            if (diemSo != null)
+                            {
+                                danhSachDiem.Add(new
+                                {
+                                    MaHS = hocSinh.MaHS,
+                                    HoTen = hocSinh.HoTen,
+                                    DiemMieng = diemSo.DiemMieng,
+                                    Diem15Phut = diemSo.Diem15Phut,
+                                    Diem1Tiet = diemSo.Diem1Tiet,
+                                    DiemHK = diemSo.DiemHK,
+                                    DiemTB = Math.Round(diemSo.TinhDiemTB(), 1)
+                                });
+                            }
+                        }
+
+                        // Tạo đối tượng bảng điểm để xuất
+                        var bangDiem = new
+                        {
+                            TenLop = lopHoc.TenLop,
+                            MonHoc = giaoVienHienTai.MonHoc.TenMH,
+                            GiaoVien = giaoVienHienTai.HoTen,
+                            NgayXuat = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"),
+                            DanhSachDiem = danhSachDiem
+                        };
+
+                        // Xuất file JSON
+                        string fileName = $"BangDiem_{lopHoc.TenLop}_{giaoVienHienTai.MonHoc.TenMH}_{DateTime.Now:yyyyMMdd_HHmmss}.json";
+                        string exportPath = Path.Combine(dataFolder, "Exports");
+
+                        if (!Directory.Exists(exportPath))
+                        {
+                            Directory.CreateDirectory(exportPath);
+                        }
+
+                        string filePath = Path.Combine(exportPath, fileName);
+                        string jsonString = JsonSerializer.Serialize(bangDiem, new JsonSerializerOptions { WriteIndented = true });
+                        File.WriteAllText(filePath, jsonString);
+
+                        MessageBox.Show($"Đã xuất file thành công!\nĐường dẫn: {filePath}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-
-                    // Tạo đối tượng bảng điểm để xuất
-                    var bangDiem = new
-                    {
-                        TenLop = lopHoc.TenLop,
-                        MonHoc = giaoVienHienTai.MonHoc.TenMH,
-                        GiaoVien = giaoVienHienTai.HoTen,
-                        NgayXuat = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"),
-                        DanhSachDiem = danhSachDiem
-                    };
-
-                    // Xuất file JSON
-                    string fileName = $"BangDiem_{lopHoc.TenLop}_{giaoVienHienTai.MonHoc.TenMH}_{DateTime.Now:yyyyMMdd_HHmmss}.json";
-                    string exportPath = Path.Combine(dataFolder, "Exports");
-
-                    if (!Directory.Exists(exportPath))
-                    {
-                        Directory.CreateDirectory(exportPath);
-                    }
-
-                    string filePath = Path.Combine(exportPath, fileName);
-                    string jsonString = JsonSerializer.Serialize(bangDiem, new JsonSerializerOptions { WriteIndented = true });
-                    File.WriteAllText(filePath, jsonString);
-
-                    MessageBox.Show($"Đã xuất file thành công!\nĐường dẫn: {filePath}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Đã xảy ra lỗi khi xuất file: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Đã xảy ra lỗi khi xuất file: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }

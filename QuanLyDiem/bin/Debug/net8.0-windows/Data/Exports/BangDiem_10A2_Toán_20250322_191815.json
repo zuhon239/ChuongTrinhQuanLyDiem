@@ -1,0 +1,26 @@
+{
+  "TenLop": "10A2",
+  "MonHoc": "To\u00E1n",
+  "GiaoVien": "Nguy\u1EC5n V\u0103n T\u00F9ng",
+  "NgayXuat": "22/03/2025 19:18:15",
+  "DanhSachDiem": [
+    {
+      "MaHS": "HS014",
+      "HoTen": "Nguy\u1EC5n Th\u00E1i Ho\u00E0ng",
+      "DiemMieng": 5,
+      "Diem15Phut": 7,
+      "Diem1Tiet": 8,
+      "DiemHK": 7,
+      "DiemTB": 7
+    },
+    {
+      "MaHS": "HS015",
+      "HoTen": "L\u00EA Minh Khoa",
+      "DiemMieng": 9,
+      "Diem15Phut": 5,
+      "Diem1Tiet": 7,
+      "DiemHK": 7,
+      "DiemTB": 7
+    }
+  ]
+}
