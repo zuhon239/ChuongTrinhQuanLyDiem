@@ -521,25 +521,43 @@ namespace QuanLyDiem.View
             try
             {
                 SaveFileDialog saveDialog = new SaveFileDialog();
-                saveDialog.Filter = "Excel Files|*.xlsx";
+                saveDialog.Filter = "CSV Files|*.csv";
                 saveDialog.Title = "Lưu file bảng điểm";
-                saveDialog.FileName = $"BangDiem_{DateTime.Now:yyyyMMdd}";
+                saveDialog.FileName = $"BangDiem_{cboLopHoc.SelectedItem}_{DateTime.Now:yyyyMMdd}.csv";
 
                 if (saveDialog.ShowDialog() == DialogResult.OK)
                 {
-                    // Code xuất Excel ở đây (sử dụng thư viện như EPPlus, ClosedXML...)
-                    MessageBox.Show("Đã xuất file Excel thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    using (StreamWriter sw = new StreamWriter(saveDialog.FileName, false, Encoding.UTF8))
+                    {
+                        List<string> headers = new List<string>();
+                        foreach (DataGridViewColumn col in dgvDanhSachHocSinh.Columns)
+                        {
+                            headers.Add(col.HeaderText);
+                        }
+                        sw.WriteLine(string.Join(",", headers));
+                        foreach (DataGridViewRow row in dgvDanhSachHocSinh.Rows)
+                        {
+                            if (!row.IsNewRow)
+                            {
+                                List<string> values = new List<string>();
+                                foreach (DataGridViewCell cell in row.Cells)
+                                {
+                                    string cellValue = cell.Value?.ToString() ?? "";
+                                    cellValue = cellValue.Replace("\"", "\"\""); // Escape quotes
+                                    cellValue = $"\"{cellValue}\""; // Wrap in quotes
+                                    values.Add(cellValue);
+                                }
+                                sw.WriteLine(string.Join(",", values));
+                            }
+                        }
+                    }
+                    MessageBox.Show("Đã xuất file CSV thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Lỗi khi xuất file: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void lblTitle_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -320,5 +320,166 @@
     "Diem15Phut": 7,
     "Diem1Tiet": 8,
     "DiemHK": 7
+  },
+  {
+    "HocSinh": {
+      "MaHS": "HS004",
+      "LopHoc": {
+        "MaLop": "L001",
+        "TenLop": "10A1",
+        "GiaoVienChuNhiem": null
+      },
+      "HoTen": "Nguy\u1EC5n V\u0103n An",
+      "NgaySinh": "2005-03-12T00:00:00",
+      "GioiTinh": "Nam",
+      "DiaChi": "H\u00E0 N\u1ED9i"
+    },
+    "MonHoc": {
+      "MaMH": "MH001",
+      "TenMH": "To\u00E1n",
+      "SoTiet": 45
+    },
+    "DiemMieng": 10,
+    "Diem15Phut": 9,
+    "Diem1Tiet": 8,
+    "DiemHK": 8
+  },
+  {
+    "HocSinh": {
+      "MaHS": "HS005",
+      "LopHoc": {
+        "MaLop": "L001",
+        "TenLop": "10A1",
+        "GiaoVienChuNhiem": null
+      },
+      "HoTen": "Ph\u1EA1m Th\u1ECB Lan",
+      "NgaySinh": "2005-07-05T00:00:00",
+      "GioiTinh": "N\u1EEF",
+      "DiaChi": "H\u00E0 N\u1ED9i"
+    },
+    "MonHoc": {
+      "MaMH": "MH001",
+      "TenMH": "To\u00E1n",
+      "SoTiet": 45
+    },
+    "DiemMieng": 7,
+    "Diem15Phut": 8,
+    "Diem1Tiet": 6,
+    "DiemHK": 5
+  },
+  {
+    "HocSinh": {
+      "MaHS": "HS006",
+      "LopHoc": {
+        "MaLop": "L001",
+        "TenLop": "10A1",
+        "GiaoVienChuNhiem": null
+      },
+      "HoTen": "V\u0169 Minh T\u00E2n",
+      "NgaySinh": "2005-08-25T00:00:00",
+      "GioiTinh": "Nam",
+      "DiaChi": "H\u00E0 N\u1ED9i"
+    },
+    "MonHoc": {
+      "MaMH": "MH001",
+      "TenMH": "To\u00E1n",
+      "SoTiet": 45
+    },
+    "DiemMieng": 8,
+    "Diem15Phut": 8,
+    "Diem1Tiet": 7,
+    "DiemHK": 6
+  },
+  {
+    "HocSinh": {
+      "MaHS": "HS007",
+      "LopHoc": {
+        "MaLop": "L001",
+        "TenLop": "10A1",
+        "GiaoVienChuNhiem": null
+      },
+      "HoTen": "B\u00F9i Qu\u1EF3nh Anh",
+      "NgaySinh": "2005-04-19T00:00:00",
+      "GioiTinh": "N\u1EEF",
+      "DiaChi": "H\u00E0 N\u1ED9i"
+    },
+    "MonHoc": {
+      "MaMH": "MH001",
+      "TenMH": "To\u00E1n",
+      "SoTiet": 45
+    },
+    "DiemMieng": 9,
+    "Diem15Phut": 9,
+    "Diem1Tiet": 9.5,
+    "DiemHK": 8.75
+  },
+  {
+    "HocSinh": {
+      "MaHS": "HS008",
+      "LopHoc": {
+        "MaLop": "L001",
+        "TenLop": "10A1",
+        "GiaoVienChuNhiem": null
+      },
+      "HoTen": "L\u00EA Minh \u0110\u1EE9c",
+      "NgaySinh": "2005-10-30T00:00:00",
+      "GioiTinh": "Nam",
+      "DiaChi": "H\u00E0 N\u1ED9i"
+    },
+    "MonHoc": {
+      "MaMH": "MH001",
+      "TenMH": "To\u00E1n",
+      "SoTiet": 45
+    },
+    "DiemMieng": 10,
+    "Diem15Phut": 9.5,
+    "Diem1Tiet": 9.25,
+    "DiemHK": 9.75
+  },
+  {
+    "HocSinh": {
+      "MaHS": "HS009",
+      "LopHoc": {
+        "MaLop": "L001",
+        "TenLop": "10A1",
+        "GiaoVienChuNhiem": null
+      },
+      "HoTen": "Ho\u00E0ng Thanh H\u01B0\u01A1ng",
+      "NgaySinh": "2005-01-14T00:00:00",
+      "GioiTinh": "N\u1EEF",
+      "DiaChi": "H\u00E0 N\u1ED9i"
+    },
+    "MonHoc": {
+      "MaMH": "MH001",
+      "TenMH": "To\u00E1n",
+      "SoTiet": 45
+    },
+    "DiemMieng": 7,
+    "Diem15Phut": 8,
+    "Diem1Tiet": 8,
+    "DiemHK": 7
+  },
+  {
+    "HocSinh": {
+      "MaHS": "HS010",
+      "LopHoc": {
+        "MaLop": "L001",
+        "TenLop": "10A1",
+        "GiaoVienChuNhiem": null
+      },
+      "HoTen": "Nguy\u1EC5n Th\u1ECB Lan Anh",
+      "NgaySinh": "2005-12-08T00:00:00",
+      "GioiTinh": "N\u1EEF",
+      "DiaChi": "H\u00E0 N\u1ED9i"
+    },
+    "MonHoc": {
+      "MaMH": "MH001",
+      "TenMH": "To\u00E1n",
+      "SoTiet": 45
+    },
+    "DiemMieng": 10,
+    "Diem15Phut": 8,
+    "Diem1Tiet": 7.5,
+    "DiemHK": 8.5
   }
 ]

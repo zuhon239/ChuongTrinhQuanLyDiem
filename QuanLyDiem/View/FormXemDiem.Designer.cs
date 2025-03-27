@@ -42,7 +42,6 @@
             lblTitle.Size = new Size(338, 24);
             lblTitle.TabIndex = 0;
             lblTitle.Text = "BẢNG ĐIỂM HỌC SINH THEO LỚP";
-            lblTitle.Click += lblTitle_Click;
             // 
             // lblLopHoc
             // 
@@ -59,7 +58,7 @@
             cboLopHoc.DropDownStyle = ComboBoxStyle.DropDownList;
             cboLopHoc.FormattingEnabled = true;
             cboLopHoc.Location = new Point(96, 73);
-            cboLopHoc.Margin = new Padding(4, 4, 4, 4);
+            cboLopHoc.Margin = new Padding(4);
             cboLopHoc.Name = "cboLopHoc";
             cboLopHoc.Size = new Size(265, 27);
             cboLopHoc.TabIndex = 2;
@@ -79,7 +78,7 @@
             cboMonHoc.DropDownStyle = ComboBoxStyle.DropDownList;
             cboMonHoc.FormattingEnabled = true;
             cboMonHoc.Location = new Point(473, 73);
-            cboMonHoc.Margin = new Padding(4, 4, 4, 4);
+            cboMonHoc.Margin = new Padding(4);
             cboMonHoc.Name = "cboMonHoc";
             cboMonHoc.Size = new Size(265, 27);
             cboMonHoc.TabIndex = 4;
@@ -93,7 +92,7 @@
             dgvDanhSachHocSinh.BackgroundColor = SystemColors.Control;
             dgvDanhSachHocSinh.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvDanhSachHocSinh.Location = new Point(21, 132);
-            dgvDanhSachHocSinh.Margin = new Padding(4, 4, 4, 4);
+            dgvDanhSachHocSinh.Margin = new Padding(4);
             dgvDanhSachHocSinh.Name = "dgvDanhSachHocSinh";
             dgvDanhSachHocSinh.ReadOnly = true;
             dgvDanhSachHocSinh.Size = new Size(1008, 455);
@@ -103,11 +102,11 @@
             // 
             btnXuatFile.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnXuatFile.Location = new Point(904, 70);
-            btnXuatFile.Margin = new Padding(4, 4, 4, 4);
+            btnXuatFile.Margin = new Padding(4);
             btnXuatFile.Name = "btnXuatFile";
             btnXuatFile.Size = new Size(125, 34);
             btnXuatFile.TabIndex = 6;
-            btnXuatFile.Text = "Xuất file Excel";
+            btnXuatFile.Text = "Xuất file CVS";
             btnXuatFile.UseVisualStyleBackColor = true;
             // 
             // lblThongKe
@@ -135,7 +134,7 @@
             Controls.Add(cboLopHoc);
             Controls.Add(lblLopHoc);
             Controls.Add(lblTitle);
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             MinimumSize = new Size(795, 567);
             Name = "FormXemDiem";
             StartPosition = FormStartPosition.CenterScreen;
