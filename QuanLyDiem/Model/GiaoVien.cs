@@ -19,7 +19,7 @@ namespace QuanLyDiem.Model
         }
         public override string GetInfo()
         {
-            return $"Họ và Tên: {HoTen}, MSSV: {MaGV}";
+            return $"Họ và Tên: {HoTen}, MSGV: {MaGV}";
         }
     }
 }
